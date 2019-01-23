@@ -1,0 +1,20 @@
+{
+	"css": [
+		"_plugins/toolbar.css",
+		"_plugins/jquery.fancybox.css",
+		"_plugins/addons.css",
+		"_plugins/comment.css",
+		"_plugins/main.min.css",
+		"_plugins/customize.min.css"
+	],
+	"js": [
+		"_plugins/addons.js",
+		"_plugins/comment.js",
+		"_plugins/main.min.js"
+	],
+	"font": [
+		"bower_components/mdi/fonts/*",
+		"bower_components/font-awesome/webfonts/*",
+		"bower_components/linearicons/dist/web-font/fonts/*"
+	]
+}

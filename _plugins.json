@@ -5,9 +5,11 @@
 		"_plugins/addons.css",
 		"_plugins/comment.css",
 		"_plugins/main.min.css",
-		"_plugins/customize.min.css"
+		"_plugins/customize.min.css",
+		"_plugins/icon-font.min.css"
 	],
 	"js": [
+		"bower_components/jquery/dist/jquery.min.js",
 		"_plugins/addons.js",
 		"_plugins/comment.js",
 		"_plugins/main.min.js"

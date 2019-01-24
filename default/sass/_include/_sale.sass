@@ -1,0 +1,196 @@
+.news-sale
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+.news-sale-top
+	margin-top: 30px
+	margin-bottom: 30px
+	+media-breakpoint-down(xs)
+		margin-top: 15px
+		margin-bottom: 15px
+	.salecol
+		figure
+			display: flex
+			+media-breakpoint-down(lg)
+				display: block
+			.saleimg
+				float: left
+				width: 775px
+				display: block
+				overflow: hidden
+				+media-breakpoint-down(lg)
+					width: 100%
+					float: none
+				img
+					+transition(all 0.4s)
+			figcaption
+				float: left
+				width: calc(100% - 775px)
+				height: auto
+				background: $blue
+				padding: 30px
+				+media-breakpoint-down(lg)
+					width: 100%
+					padding: 15px
+					float: none
+				time
+					color: #c6eef2
+					+fs(13rem)
+					&:before
+						content: '\f073'
+						font-family: 'fontawesome'
+						padding-right: 15px
+				.salename
+					+fs(18rem)
+					padding-bottom: 10px
+					margin-bottom: 10px
+					+pos(rel, null)
+					margin-top: 15px
+					+media-breakpoint-down(lg)
+						+fs(16rem)
+					&:before
+						content: ''
+						background: $white
+						width: 50px
+						height: 1px
+						+pos(abs, null null 0 null)
+					a
+						text-transform: uppercase
+						color: $white
+						line-height: 1.5
+				.saledesc
+					color: $white
+			&:hover
+				.saleimg
+					img
+						+transform(scale3d(1.2,1.2,1))
+.news-sale-middle
+	.salecol-middle
+		+pos(rel,null)
+		figure
+			.salecol-img
+				display: block
+				overflow: hidden
+				img
+					+transition(all 0.5s)
+					width: 100%
+			figcaption
+				+pos(abs, 0 null null)
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 100%
+				width: 100%
+				text-align: center
+				padding: 0 50px
+				+media-breakpoint-down(md)
+					padding: 0 30px
+				+media-breakpoint-down(xs)
+					padding: 0 15px
+				.salecol-name
+					line-height: 1.5
+					+fs(20rem)
+					+media-breakpoint-down(md)
+						+fs(16rem)
+					a
+						color: $white
+						text-transform: uppercase
+			&:hover
+				.salecol-img
+					img
+						+transform(scale3d(1.2,1.2,1))
+.news-sale-detail
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 0px 0px 15px
+	.pagetitle
+		line-height: 1.5
+		text-align: left
+		margin-top: 10px
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+		&:before
+			left: 0
+			+transform(none)
+	.sale-head
+		time
+			+fs(13rem)
+			color: darken($white,40%)
+			&:before
+				content: '\f073'
+				font-family: 'fontawesome'
+				padding-right: 10px
+	.content
+		ol
+			margin-left: 15px
+			margin-right: 15px
+			li
+				color: $blue
+				font-weight: bold
+				p
+					font-weight: normal
+.sale-news 
+	margin-bottom: 40px
+	margin-top: 50px
+	+media-breakpoint-down(md)
+		margin-top: 0
+		margin-bottom: 30px
+	+media-breakpoint-down(xs)
+		margin-bottom: 15px
+	.pagetitle
+		line-height: 1.5
+		text-align: left
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+		&:before
+			left: 0
+			+transform(none)
+	.post 
+		margin-bottom: 15px
+		figure 
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
+			.post-img 
+				display: flex
+				width: 120px
+				height: 80px
+				overflow: hidden
+				justify-content: center
+				align-items: center
+				float: left
+				img 
+					height: 100%
+					width: auto
+					max-width: unset  
+			figcaption 
+				width: calc(100% - 120px)
+				float: left
+				padding-left: 15px
+				.post-name 
+					+fs(13rem)
+					// text-transform: uppercase
+					font-weight: 500
+					margin-bottom: 5px
+					line-height: 1.5
+					a 
+						color: darken($white,60%)
+						&:hover 
+							color: $blue   
+				time 
+					color: darken($white,40%)
+					+fs(12rem)
+					&:before
+						content: '\f073'
+						font-family: 'fontawesome'
+						padding-right: 10px
+.news-detail-page
+	.block-saleNews,.news-sale-middle
+		display: none

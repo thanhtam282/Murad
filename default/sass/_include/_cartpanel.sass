@@ -1,0 +1,207 @@
+// CART PANEL
+
+.cartpanel
+	display: block
+	+pos(abs, 100% 0 null null)
+	width: 300px
+	background: $white
+	+transition(all,0.3s)
+	z-index: 115
+	+bor-rad(5px)
+	// overflow: hidden
+	box-shadow: 0 10px 30px color-rgba($black,0.2)
+	// margin-top: 20px
+	// visibility: visible
+	// opacity: 0
+	display: none
+	+media-breakpoint-down(xs)
+		+pos(fix, 60px 0 0 0)
+		width: auto 
+		margin-top: 0
+	&:before
+		content: ''
+		display: block
+		width: 0
+		height: 0
+		border: 7px solid
+		border-color: transparent transparent $yellow transparent
+		+pos(abs, -14px 11px null null)
+		+media-breakpoint-down(lg)
+			right: 8px
+		+media-breakpoint-down(xs)
+			right: 22px
+	+media-breakpoint-down(lg)
+		// width: 35%
+	+media-breakpoint-down(md)
+		// width: 45%
+	+media-breakpoint-down(sm)
+		// width: 50%
+	+media-breakpoint-down(xs)
+		// width: 100%
+	&.open
+		// margin-top: 0
+		// visibility: visible
+		// opacity: 1
+		display: block
+		// box-shadow: 0.5625rem 0.5625rem 2.5rem 0.5rem rgba(0, 0, 0, 0.1)
+	> .title
+		+fs(12rem)
+		font-weight: 400
+		text-transform: uppercase
+		color: $white
+		background: $yellow
+		padding: 0 15px
+		line-height: 40px
+		+bor-rad(5px 5px 0 0)
+		text-align: left !important
+		// margin-bottom: 25px
+		+media-breakpoint-down(xs)
+			+bor-rad(0)
+		.amount, a
+			// font-weight: bold
+			// margin-right: 5px
+			// +fs(18rem)
+			// color: darken($red,10%)
+			// +pos(static,null)
+			// position: static !important
+			// background: none !important
+			// text-align: left !important
+		a 
+			color: $white
+			&:after
+				content: '\f105'
+				font-family: 'fontawesome'
+				margin-left: 5px
+				// color: $yellow
+			&:hover
+				text-decoration: underline
+	.btn-closecart
+		+fs(18rem)
+		width: 18px
+		height: 18px
+		color: $white
+		// background: $yellow
+		+bor-rad(50%)
+		+pos(abs, 10px 10px null null)
+		line-height: 1
+		text-align: center
+		cursor: pointer
+		+transition(all,0.5s)
+		.lnr
+			&:before
+				line-height: 1
+		&:hover
+			+transform(rotateZ(180deg))
+	.cart-list
+		overflow: auto
+		max-height: 243px
+		+media-breakpoint-down(xs)
+			max-height: unset
+			height: calc(100vh - 60px - 40px - 30px - 40px)
+		ul 
+			width: 100%
+			padding: 0
+			overflow: auto
+			li 
+				width: 100%
+				padding: 10px
+				border-bottom: 1px dashed darken($white,10%)
+				+pos(rel,null)
+				+transition(all,0.5s)
+				display: flex
+				flex-wrap: wrap
+				text-align: left !important
+				&:after
+					content: ''
+					display: table
+					width: 100%
+					height: 0
+					clear: both
+				&:hover
+					background: lighten($red,65%)
+				// border-bottom: 1px solid darken($white,10%)
+				.product-img
+					display: block
+					width: 60px
+					border: 1px solid $red
+					img 
+						width: 100%
+				.product-info
+					width: calc(100% - 60px)
+					padding: 5px 15px
+					text-align: left !important
+					margin-bottom: 0
+				.product-name
+					+fs(14rem)
+					font-weight: bold
+					text-align: left !important
+					a 
+						color: $main
+				.size
+					+fs(13rem)
+					// font-weight: bold
+					color: darken($white,40%)
+				.amount
+					font-weight: bold
+					color: $yellow
+					font-size: 0.8rem !important
+					line-height: 1.5 !important
+					position: static !important
+					top: unset !important
+					right: unset !important
+					background: none !important
+					text-align: left !important
+					border-radius: 0 !important
+					padding: 0 !important
+				.remove-product
+					+pos(abs, 25px 10px null null)
+					+fs(18rem)
+					color: darken($white,40%)
+					+transition(all,0.5s)
+					cursor: pointer
+					&:hover
+						color: $black
+	.checkout-panel
+		// +pos(abs, null 0 0 0)
+	.total
+		display: block
+		width: 100%
+		padding: 0px 15px
+		line-height: 30px
+		+fs(15rem)
+		// background: darken($white,5%)
+		text-align: left
+		color: $main
+		strong 
+			color: $yellow
+		+media-breakpoint-down(xs)
+	.button
+		display: flex
+		width: 100%
+		text-align: center
+		line-height: 1.5rem !important
+		+bor-rad(0px 0px 5px 5px)
+		overflow: hidden
+		+media-breakpoint-down(xs)
+		.btn-checkout, .btn-viewcart
+			background: $red
+			color: $white
+			padding: 0
+			line-height: 40px
+			+fs(13rem)
+			width: 60%
+			text-align: center
+			&:before
+				content: '\f218'
+				font-family: 'fontawesome'
+				margin-right: 5px
+			&:hover
+				background: darken($red,10%)
+		.btn-viewcart
+			width: 40%
+			border-left: 1px solid lighten($red,5%)
+			background: darken($white,20%)
+			color: $main
+			&:hover
+				background: darken($white,30%)
+	

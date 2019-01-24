@@ -1,0 +1,98 @@
+.solution-top
+	background-size: cover
+	margin-top: 50px
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+		margin-top: 30px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+		margin-top: 15px
+	.box-solution
+		width: 60%
+		float: right
+		padding-right: 80px
+		+media-breakpoint-down(md)
+			padding-right: 30px
+			width: 75%
+		+media-breakpoint-down(sm)
+			width: 100%
+		+media-breakpoint-down(xs)
+			padding: 0 15px
+		.pagetitle
+			color: $white
+			+fs(20rem)
+			+media-breakpoint-down(xs)
+				+fs(16rem)
+			&:before
+				background: $white
+		.solution-desc
+			color: $white
+			margin-top: 10px
+			text-align: center
+			+media-breakpoint-down(md)
+				+fs(13rem)
+			+media-breakpoint-down(xs)
+				display: none
+.solution-step
+	text-align: center
+	padding: 50px 0px
+	margin: 0 50px
+	+media-breakpoint-down(lg)
+		margin: 0
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.stepcol
+		border: 2px solid darken($white,16%)
+		padding: 50px
+		width: 280px
+		margin: 0 auto
+		+transition(all 0.5s)
+		cursor: pointer
+		+pos(rel,null)
+		+media-breakpoint-down(md)
+			width: 100%
+			padding: 15px
+		&:before
+			content: '\f0d7'
+			font-family: 'fontawesome'
+			+pos(abs, null null -20px)
+			+fs(20rem)
+			color: $blue
+			opacity: 0
+			+transition(all 0.5s)
+		figure
+			figcaption
+				+pos(rel,null)
+				.stepnumber
+					+fs(50rem)
+					font-weight: 700
+					color: darken($white,4%)
+					+media-breakpoint-down(md)
+						+fs(30rem)
+				.stepname
+					color: $blue
+					+pos(abs, null null 15px 50%)
+					+transform(translateX(-50%))
+					width: 100%
+					+media-breakpoint-down(md)
+						+pos(static,unset)
+						+transform(none)
+		&:hover
+			border: 2px solid $blue
+			+header-sd()
+			&:before
+				opacity: 1
+		&.active
+			border: 2px solid $blue
+			+header-sd()
+			&:before
+				opacity: 1
+.solution-product
+	padding-bottom: 50px
+	+media-breakpoint-down(md)
+		padding-bottom: 30px
+	+media-breakpoint-down(xs)
+		padding-bottom: 15px

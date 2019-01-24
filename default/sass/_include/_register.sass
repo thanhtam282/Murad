@@ -1,0 +1,62 @@
+.register-dealer
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.div-subtitle2
+		text-align: center
+		width: 80%
+		margin: 0 auto
+		padding: 30px 0px
+		+media-breakpoint-down(md)
+			width: 100%
+		+media-breakpoint-down(xs)
+			padding: 15px 0px
+	.register-title,.register-subtitle
+		h2,h3
+			color: $blue
+			text-transform: uppercase
+			font-weight: bold
+			margin-bottom: 30px
+			+fs(18rem)
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+				+fs(16rem)
+	.register-info,.register-havespa,.register-nonhavespa
+		.form-group
+			margin-bottom: 30px
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+			h4
+				margin-bottom: 15px
+			input
+				+bor-rad(20px)
+				background: #e7edee
+				border: 1px solid #d7d7d7
+				&:hover
+					border: 1px solid $blue
+				&:focus
+					border: 1px solid $blue
+		.settingcontrol
+			#ctl00_mainContent_ctl00_captcha_ctl01
+				float: left
+	.register-btnsubmit
+		input[type="submit"]
+			text-align: center
+			display: block
+			text-transform: uppercase
+			padding: 10px 0px
+			text-align: center
+			width: 180px
+			background: $blue
+			border-radius: 30px
+			font-weight: 500
+			border: 0
+			color: $white
+			overflow: hidden
+			+media-breakpoint-down(xs)
+				width: 100%
+			&:hover
+				background: $main
+				color: $white

@@ -1,0 +1,171 @@
+.store-wrap 
+	+pos(rel,null)
+	border: 1px solid darken($white,10%)
+	margin-top: 30px
+	margin-bottom: 50px
+	+media-breakpoint-down(md)
+		margin-bottom: 30px
+	+media-breakpoint-down(xs)
+		margin-top: 15px
+		margin-bottom: 15px
+	&.contactpage-store
+		#map
+			margin-left: 25%
+.store-system 
+	+pos(rel,null)
+	margin: 0
+	padding: 30px 0px
+	.about-title 
+		text-align: center
+		padding: 10px 0px 
+	.container 
+		+pos(rel,null) 
+	.row 
+		margin: 0 
+	.col-xs-12 
+		padding: 0 
+	#map 
+		iframe 
+			width: 100%
+			height: 500px   
+.store-maps 
+	+pos(rel,null) 
+.maps-overlay 
+	+pos(abs, 0 null 0 0)
+	right: 0
+	background: $black
+	opacity: 0 
+.findmap-wrap 
+	+pos(abs,0 null 0 0)
+	width: 25%
+	z-index: 20
+	background: #e7edee
+	border-right: 1px solid darken($white,10%)
+	padding: 15px
+	+media-breakpoint-down(md) 
+		width: 40% 
+	+media-breakpoint-down(sm) 
+		+pos(static,unset)
+		width: 100% 
+ 	// box-shadow: 0 10px 30px color-rgba($black,0.1)
+.findmap 
+	z-index: 10
+	.filtermap 
+		width: 100%
+		background: $white
+		+bor-rad(20px)
+		input
+			border: 0
+			font-style: italic
+			padding: 10px 15px
+			float: left
+			width: calc(100% - 69px)
+			+bor-rad(20px 0 0 20px)
+		.btn-search
+			background: $blue
+			width: 65px
+			+bor-rad(20px)
+			padding: 1px 0px
+			margin-top: 4px
+			margin-right: 4px
+			&:before
+				content: '\f002'
+				font-family: 'fontawesome'
+				color: $white
+				+fs(18rem)
+			&:hover
+				background: $main
+.store-list 
+	margin-top: 15px
+	max-height: 510px
+	overflow-y: auto
+	+media-breakpoint-down(sm)
+		margin-top: 5px
+		max-height: 350px
+	&::-webkit-scrollbar-track
+		background-color: $white
+	&::-webkit-scrollbar
+		width: 4px
+		background-color: $white
+	&::-webkit-scrollbar-thumb
+		background-color: $blue
+		border: none
+	.storelist 
+		.store 
+			+bor-rad(5px)
+			border-bottom: 1px solid #d7d7d7
+			+bor-rad(0)
+			&:last-child
+				border: 0
+				margin-bottom: 0
+			.storebox 
+				padding: 15px 0
+			.storetitle 
+				font-weight: bold
+				color: $main
+				+pos(rel,null)
+				cursor: pointer
+				color: $main
+				+transition(all,0.3s)
+				+media-breakpoint-down(xs)
+					+fs(13rem)
+				&:hover 
+					color: $blue
+				&:after 
+					content: '\f105'
+					font-family: 'fontawesome'
+					+pos(abs, 0px 10px null null)
+					+fs(16rem)
+					display: block
+					+transform(rotateZ(90deg))
+				&.active 
+					&:after 
+						+transform(rotateZ(270deg))   
+			.storecontent 
+				display: none
+				ul
+					padding: 0
+					margin: 0
+					li
+						cursor: pointer
+						&:before
+							background: none
+						&.active
+							strong
+								color: $blue
+						strong,p
+							+fs(13rem)
+						p
+							margin-bottom: 5px
+.search-location 
+	.searh-text 
+		input 
+			color: $main
+			padding: 6px 10px
+			width: 100%
+			+fs(11rem)
+			border: none
+			+bor-rad(3px)
+			background-color: #f2f2f2  
+	.name-locate 
+		display: block
+		margin-top: 15px
+		button 
+			+pos(abs,5px 10px null null)
+			color: $blue
+			border: none
+			background: 0 0
+#map
+	height: 610px
+	margin-left: 30%
+	+media-breakpoint-down(md)
+		height: 600px
+	+media-breakpoint-down(sm)
+		height: 400px
+		margin-left: 0
+	#map_canvas
+		height: 610px
+		+media-breakpoint-down(md)
+			height: 600px
+		+media-breakpoint-down(sm)
+			height: 400px

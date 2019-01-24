@@ -1,0 +1,519 @@
+.pagetitle
+	color: $main
+	+fs(24rem)
+	text-transform: uppercase
+	font-weight: 400
+	text-align: center
+	+pos(rel,null)
+	padding-bottom: 10px
+	+media-breakpoint-down(md)
+		+fs(20rem)
+		line-height: 1.5
+	+media-breakpoint-down(xs)
+		+fs(18rem)
+		line-height: 1.5
+	&:before
+		content: ''
+		background: $main
+		width: 50px
+		height: 1px
+		+pos(abs, null null 0 50%)
+		+transform(translateX(-50%))
+.headtitle
+	// font-family: 'Yeseva One'
+	+fs(30rem)
+	font-weight: 300
+	color: $main
+	margin-bottom: 30px
+	padding-bottom: 15px
+	+pos(rel,null)
+	+media-breakpoint-down(md)
+		+fs(24rem)
+		line-height: 1.5
+	+media-breakpoint-down(xs)
+		+fs(20rem)
+		margin-bottom: 15px
+	a
+		color: $main
+	&:before
+		content: ''
+		background: $blue
+		width: 60px
+		height: 2px
+		+pos(abs, null null 0 null)
+.home-solution
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.container
+		+media-breakpoint-down(xl)
+			max-width: 1430px
+			width: 100%
+	.list-solution
+		margin-top: 30px
+		+media-breakpoint-down(sm)
+			margin-top: 15px
+		.item
+			padding: 0 10px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			+fs(0)
+			color: $main
+			text-shadow: 0 1px 3px color-rgba($main,0.1)
+			+transition(all,0.3s)
+			+media-breakpoint-down(lg)
+				display: none !important
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(48rem)
+				+media-breakpoint-down(sm)
+					+fs(18rem)
+			// &:hover
+			// 	color: $blue
+		.slick-prev
+			left: -25px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -25px
+			&:before
+				content: '\f105'
+.solutioncol
+	figure
+		+pos(rel,null)
+		.solutionimg
+			display: block
+			overflow: hidden
+			img
+				+transition(all,0.3s)
+				width: 100%
+		figcaption
+			+pos(abs,50% 0 null null)
+			width: 60%
+			padding: 0 10px
+			+transform(translateY(-50%))
+			+media-breakpoint-down(lg)
+				width: 100%
+				background: color-rgba($black, 0.4)
+				height: 100%
+				padding: 15px
+			.solutionname
+				+fs(18rem)
+				margin-bottom: 5px
+				line-height: 1.5
+				+media-breakpoint-down(lg)
+					+fs(16rem)
+					margin-bottom: 10px
+				+media-breakpoint-down(md)
+					+fs(14rem)
+				a
+					color: $white
+					font-weight: 300
+			.solutiondesc
+				+fs(13rem)
+				font-weight: 300
+				color: $white
+				+media-breakpoint-down(md)
+					+fs(12rem)
+		&:hover
+			.solutionimg
+				img
+					+transform(scale3d(1.1,1.1,1))
+.home-three-step
+	background: url(../img/bg2.jpg) no-repeat center center
+	padding-bottom: 50px
+	+media-breakpoint-down(md)
+		padding-bottom: 30px
+	+media-breakpoint-down(xs)
+		padding-top: 15px
+	.step
+		margin-top: 50px
+		text-align: center
+		+media-breakpoint-down(md)
+			margin-top: 30px
+.home-category
+	padding: 50px 0px
+	background: #e7edee
+	height: 730px
+	+media-breakpoint-down(lg)
+		height: 520px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+		height: auto
+	.container
+		+media-breakpoint-up(xl)
+			max-width: 1430px
+			width: 100%
+.box-category
+	+pos(rel,null)
+	.category-img
+		.img
+			+pos(abs,0 null null null)
+			z-index: -1
+			&.active
+				z-index: 1
+	.category-step
+		height: 630px
+		+pos(rel,null)
+		z-index: 99
+		+media-breakpoint-down(lg)
+			height: 520px
+		+media-breakpoint-down(md)
+			height: auto
+		ul
+			+pos(abs, null null null null)
+			border: 0
+			height: 630px
+			width: 100%
+			+media-breakpoint-down(lg)
+				height: 520px
+			+media-breakpoint-down(md)
+				height: auto
+			li
+				a
+					padding: 0
+					border: 0
+					+transition(all 5s)
+					&.active
+						background: none !important
+					&.opt1
+						width: 220px
+						height: 65px
+						+pos(abs,21% null null 14%)
+					&.opt2
+						width: 220px
+						height: 65px
+						+pos(abs,36% null null 12%)
+					&.opt3
+						width: 220px
+						height: 65px
+						+pos(abs,50% null null 11%)
+					&.opt4
+						width: 220px
+						height: 65px
+						+pos(abs,65% null null 12%)
+					&.opt5
+						width: 220px
+						height: 65px
+						+pos(abs,80% null null 13%)
+					&.opt6
+						width: 220px
+						height: 65px
+						+pos(abs,21% 13% null null)
+					&.opt7
+						+pos(abs,36% 12% null null)
+						width: 220px
+						height: 65px
+					&.opt8
+						width: 220px
+						height: 65px
+						+pos(abs,50% 11% null null)
+					&.opt9
+						width: 220px
+						height: 65px
+						+pos(abs,65% 11% null null)
+					&.opt10
+						width: 220px
+						height: 65px
+						+pos(abs,79% 13% null null)
+.home-product
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.pagetitle
+		+media-breakpoint-down(md)
+			float: left
+			&:before
+				+transform(none)
+				left: 0
+	.btn-show-tabs
+		display: none
+		+media-breakpoint-down(lg)
+			display: block
+			text-align: right
+			padding: 5px 15px
+			color: $blue
+.home-sale
+	margin: 0 auto
+	width: 910px
+	+media-breakpoint-down(lg)
+		width: 100%
+	.list-sale
+		margin-top: 30px
+		+media-breakpoint-down(xs)
+			margin-top: 15px
+	.slick-dots
+		+pos(abs, null 0 15px 0)
+	.salecol
+		figure
+			+pos(rel,null)
+			.saleimg
+				img
+					margin: 0 auto
+					margin-bottom: 60px
+					+media-breakpoint-down(sm)
+						margin-bottom: 15px
+			figcaption
+				+pos(abs, 50% null null 0px)
+				width: 270px
+				background: $blue
+				padding: 30px 20px
+				+transform(translateY(-50%))
+				+media-breakpoint-down(sm)
+					padding: 15px
+					+pos(static,unset)
+					width: 100%
+					+transform(none)
+				.saledesc
+					+fs(17rem)
+					font-weight: 200
+					color: $white
+					+media-breakpoint-down(xs)
+						+fs(15rem)
+				span
+					color: $white
+.home-news
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 0px 0px 30px
+	+media-breakpoint-down(sm)
+		padding: 15px 0px
+.m-w
+	+media-breakpoint-up(xl)
+		max-width: 1230px
+.home-blogs
+	.list-blog
+		margin-top: 30px
+		.row
+			+media-breakpoint-up(xl)
+				margin-left: -2px
+				margin-right: -2px
+		.col-lg-4
+			+media-breakpoint-up(xl)
+				padding: 0 2px
+.blogcol
+	+pos(rel,null)
+	&.blue1
+		figure
+			figcaption
+				background: color-rgba(#457bb0,0.7)
+	&.green
+		figure
+			figcaption
+				background: color-rgba($green,0.7)
+	figure
+		.blogimg
+			display: block
+			overflow: hidden
+			img
+				+transition(all,0.8s)
+				width: 100%
+		figcaption
+			+pos(abs,null null 0 null)
+			text-align: center
+			width: 100%
+			padding: 10px 0px
+			background: color-rgba($blue,0.7)
+			.blogname
+				+fs(16rem)
+				text-transform: uppercase
+				a
+					color: $white
+		&:hover
+			.blogimg
+				img
+					+transform(scale3d(1.3,1.3,1) rotate(5deg))
+.bottom-desc
+	color: $main
+	width: 610px
+	margin: 0 auto
+	margin-top: 30px
+	text-align: center
+	+media-breakpoint-down(md)
+		width: 100%
+	+media-breakpoint-down(xs)
+		margin-top: 15px
+		+fs(13rem)
+.home-expert
+	padding: 50px 0px 100px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 0px 0px 15px
+	.list-expert
+		margin-top: 30px
+		+media-breakpoint-down(xs)
+			margin-top: 15px
+		.bg1
+			background: darken($white,5%)
+		.col-md-6
+			height: auto
+			padding: 0
+		.row
+			margin-left: 0px
+			margin-right: 0px
+		.viewmore,.contactexpert
+			background: #737d83
+			width: 150px
+			display: block
+			padding: 10px 0
+			text-align: center
+			color: $white
+			font-weight: bold
+			text-transform: uppercase
+			+bor-rad(20px)
+			+fs(14rem)
+			float: left
+			+media-breakpoint-down(lg)
+				width: 46%
+				margin-bottom: 10px
+				margin-right: 15px
+			+media-breakpoint-down(md)
+				+fs(11rem)
+				width: 40%
+				padding: 7px 0px
+			+media-breakpoint-down(xs)
+				width: 33%
+				margin-right: 7px
+			&:before
+				background: color-rgba($white,0.2)
+		.contactexpert
+			width: 240px
+			background: $blue
+			margin-left: 15px
+			+media-breakpoint-down(lg)
+				width: 50%
+				margin: 0
+			+media-breakpoint-down(md)
+				width: 55%
+			+media-breakpoint-down(xs)
+				width: 63%
+			span
+				padding-right: 15px
+		.slick-dots
+			bottom: -40px
+			+media-breakpoint-down(md)
+				bottom: 0
+	.expertintro
+		padding: 30px
+		+media-breakpoint-down(md)
+			padding: 15px
+		.expertname
+			color: $main
+			font-weight: 500
+			+fs(24rem)
+			text-transform: uppercase
+			line-height: 1.5
+			+media-breakpoint-down(lg)
+				+fs(18rem)
+			+media-breakpoint-down(md)
+				+fs(15rem)
+				margin-bottom: 15px
+			+media-breakpoint-down(xs)
+				+fs(13rem)
+		.expertposition
+			color: $main
+			font-style: italic
+			color: #737d83
+			margin-top: 10px
+			border-bottom: 1px solid darken($white,10%)
+			padding-bottom: 20px
+			margin-bottom: 20px
+			+media-breakpoint-down(md)
+				display: none
+			+media-breakpoint-down(xs)
+				+fs(14rem)
+				margin-bottom: 15px
+		.expertdesc
+			color: $main
+			margin-bottom: 30px
+			+media-breakpoint-down(md)
+				+fs(0)
+			+media-breakpoint-down(xs)
+				float: left
+				width: 100%
+				margin-bottom: 10px
+	.expertimg
+		+media-breakpoint-down(lg)
+			height: 100%
+		img
+			margin: 0 auto
+			width: 100%
+			+media-breakpoint-down(lg)
+				height: 100%
+.home-consultant
+	padding-bottom: 30px
+	+media-breakpoint-down(xs)
+		padding-bottom: 0
+	.list-consultant
+		margin-top: 30px
+	.consultantcol
+		figure
+			.consultantimg
+				display: block
+				overflow: hidden
+				img
+					+transition(all,0.3s)
+			figcaption
+				+pos(abs, null null 30px 30px)
+				+media-breakpoint-down(xs)
+					left: 0
+					bottom: 0
+					padding: 15px
+					background: color-rgba($blue,0.7)
+					width: 100%
+				.consultantname
+					a
+						+fs(24rem)
+						color: $white
+						text-align: center
+						+media-breakpoint-down(xs)
+							+fs(15rem)
+			&:hover
+				.consultantimg
+					img
+						+transform(scale3d(1.1,1.1,1))
+	.consultantlink
+		padding: 15px
+		background: darken($white,2%)
+		height: 100%
+		ul
+			li
+				a
+					color: $main
+					display: block
+					padding: 10px 20px
+					border-bottom: 1px solid darken($white,10%)
+					&.active
+						color: $white
+						background: $blue
+					&:hover
+						color: $white
+						background: $blue
+		.continue
+			background: $blue
+			text-transform: uppercase
+			font-weight: bold
+			color: $white
+			width: 150px
+			+bor-rad(20px)
+			padding: 10px 0px
+			text-align: center
+			display: block
+			margin-top: 30px
+			+media-breakpoint-down(xs)
+				+fs(13rem)
+				padding: 10px 0px
+				margin: 30px auto
+				margin-bottom: 0
+			&:before
+				content: '\f178'
+				font-family: 'fontawesome'
+				padding-right: 10px

@@ -12,6 +12,7 @@
     <portal:skinfolderscript id="SkinFolderScript1" runat="server" scriptfilename="js/addons.js" addtocombinedscript="true" />
 	<portal:skinfolderscript id="SkinFolderScript2" runat="server" scriptfilename="js/comment.js" addtocombinedscript="true" />	
     <portal:skinfolderscript id="SkinFolderScript3" runat="server" scriptfilename="js/main.min.js" addtocombinedscript="true" />
+    <portal:skinfolderscript id="SkinFolderScript4" runat="server" scriptfilename="js/custom_2019.min.js" addtocombinedscript="true" />
     <portal:googleanalyticsscript id="GoogleAnalyticsScript1" runat="server" />
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">

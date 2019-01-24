@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese')
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Upright:300,400,500,600,700&subset=latin-ext,vietnamese')
+
+// MATERIAL COLOR
+$red: #ec1e36
+$pink: #df2e82
+$purple: #852163
+$deeppurple: #673AB7
+$indigo: #3F51B5
+$blue: #4cbbc6
+$lightblue: #03A9F4
+$cyan: #00BCD4
+$teal: #009688
+$green: #8fad15
+$lightgreen: #8dc63f
+$lime: #CDDC39
+$yellow: #ffcf00
+$amber: #FFC107
+$orange: #ff9800
+$deeporange: #FF5722
+$brown: #957c5c
+$lbrown: #d69b28
+$dbrown: #7b2e00
+$grey: #212121
+$bluegrey: #263238
+
+$white: #fff
+$black: #000
+$lblack: #222
+$main: #333
+$red: #ec1e36
+$lred: lighten($red,10%)
+$dblue: #006aa4
+
+
+
+// MATERIAL VARIABLE
+=flex
+	display: -webkit-box
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: flex
+=clearfix
+	content: ''
+	display: table
+	width: 100%
+	clear: both
+=flatbutton
+	display: inline-block
+	+fs(14rem)
+	text-transform: uppercase
+	font-weight: 500
+	font-family: 'Roboto'
+	padding: 0 16px
+	line-height: 36px
+	+bor-rad(2px)
+	&:hover
+		background: color-rgba(lighten($black,62%),0.2)
+	&:active
+		background: color-rgba(lighten($black,62%),0.4)
+	&:focus
+		background: color-rgba($black,0.12)
+=material-card
+	+bor-rad(2px)
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12)
+=header-sd
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)
+
+=mainbutton
+	display: inline-block
+	clear: both
+	float: left
+	+fs(14rem)
+	border: 1px solid darken($white,10%)
+	+bor-rad(2px)
+	padding: 7px 15px
+	color: $yellow
+	font-weight: 500
+	&:hover
+		background: $main
+		color: $white
+
+=fs($size)
+	font-size: ($size / 16)
+body
+	margin: 0
+	padding: 0
+	+fs(15rem)
+	font-family: 'Montserrat', sans-serif
+	color: $main
+	line-height: 1.5
+html
+	overflow: auto
+#fullpage
+	overflow: hidden
+	max-width: 1600px
+	margin: 0 auto
+a 
+	+transition(all,0.3s)
+a, a:hover
+	&:focus, &:active, &:hover
+		outline: none
+		text-decoration: none
+input,button, select, textarea
+	+transition(all,0.5s)
+	&:hover, &:active, &:focus
+		outline: none
+button 
+	border: none
+	background: none
+	margin: 0
+	padding: 0
+	+transition(all,0.3s)
+img, iframe
+	vertical-align: middle
+main
+	clear: both
+	&:before, &:after
+		content: ''
+		display: table
+		width: 100%
+		clear: both
+strong 
+	span 
+		font-weight: bold
+
+.flex, .flex-wrap
+	clear: both
+.flex-center
+	display: flex
+	align-items: center
+.container
+	+media-breakpoint-up(xl)
+		width: 1200px
+		max-width: 100%
+.content
+	line-height: 1.5
+	// +transition(all,0.5s)
+	// +fs(14rem)
+	+media-breakpoint-down(xs)
+		+fs(14rem)
+	ul, ol, p, h1, h2, h3, h4, h5, h6, img, figure
+		margin-bottom: 15px
+		line-height: 1.5
+		color: $main
+	figure
+		margin: 0 auto 15px
+		text-align: center
+		img
+			margin: 0 auto 10px
+			// width: 100%
+		figcaption
+			background: darken($white,5%)
+			padding: 5px 10px
+			text-align: center
+			+fs(13rem)
+			color: darken($white,60%)
+	ul 
+		padding-left: 15px
+		li 
+			+pos(rel,null)
+			&:before
+				content: ''
+				display: block
+				width: 4px
+				height: 4px
+				+bor-rad(50px)
+				background: darken($white,60%)
+				+pos(abs, 7px null null -15px)
+	.red
+		color: $red
+	.simi
+		font-weight: 500
+	.lblack
+		color: $lblack
+
+.nopadding
+	padding: 0
+
+.col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12
+	+transition(all,0.5s)
+/* fallback */
+@font-face
+	font-family: 'Material Icons'
+	font-style: normal
+	font-weight: 400
+	src: url(https://fonts.gstatic.com/s/materialicons/v30/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2')
+.material-icons
+	font-family: 'Material Icons'
+	font-weight: normal
+	font-style: normal
+	font-size: 24px
+	line-height: 1
+	letter-spacing: normal
+	text-transform: none
+	display: inline-block
+	white-space: nowrap
+	word-wrap: normal
+	direction: ltr
+	-webkit-font-feature-settings: 'liga'
+	-webkit-font-smoothing: antialiased

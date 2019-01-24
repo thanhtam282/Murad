@@ -1,0 +1,470 @@
+.about-link
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 15px
+	ul
+		text-align: center
+		+media-breakpoint-down(md)
+			display: none
+		li
+			display: inline-block
+			+media-breakpoint-down(md)
+				width: 100%
+			a
+				border: 0
+				+fs(16rem)
+				text-transform: uppercase
+				+bor-rad(0)
+				font-weight: 400
+				display: flex
+				align-items: center
+				justify-content: center
+				color: #999999
+				padding: 10px 15px
+				+pos(rel,null)
+				text-transform: uppercase
+				+media-breakpoint-down(md)
+					background: darken($white,4%)
+					display: block
+					text-align: left
+				+media-breakpoint-down(xs)
+					+fs(13rem)
+				&.active
+					+bor-rad(20px)
+					background: $blue
+					color: $white
+					+media-breakpoint-down(md)
+						+bor-rad(0)
+						background: none
+						color: $blue
+					&:hover
+						color: $white
+				&:hover
+					color: $blue
+.about-murad
+	+pos(rel,null)
+	padding-bottom: 100px
+	+media-breakpoint-down(lg)
+		padding-bottom: 50px
+	+media-breakpoint-down(md)
+		padding-bottom: 30px
+	+media-breakpoint-down(xs)
+		padding-bottom: 15px
+	+media-breakpoint-up(xl)
+		&:after
+			content: ''
+			background: #cccccc
+			height: 100px
+			width: 1px
+			+pos(abs, null null 0 50%)
+			+transform(translateX(-50%))
+	.pagetitle
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	.desc
+		text-align: center
+		width: 80%
+		margin: 0 auto
+		margin-bottom: 30px
+		+media-breakpoint-down(md)
+			width: 100%
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	.img
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
+		img
+			width: 100%
+	&.about-dr-murad
+		padding-bottom: 50px
+		+media-breakpoint-down(md)
+			padding-bottom: 30px
+		+media-breakpoint-down(xs)
+			padding-bottom: 15px
+		&:after
+			display: none
+.box-murad
+	border: 2px solid $main
+	padding: 25px
+	+media-breakpoint-down(xs)
+		padding: 15px
+	.murad-author
+		text-transform: uppercase
+		+fs(16rem)
+		font-weight: 500
+		+media-breakpoint-down(xs)
+			+fs(14rem)
+	.murad-title
+		+fs(25rem)
+		font-weight: 500
+		+media-breakpoint-down(md)
+			+fs(18rem)
+		+media-breakpoint-down(xs)
+			+fs(15rem)
+.about-detail-murad
+	padding: 50px
+	+media-breakpoint-down(md)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 15px
+	.title
+		+fs(20rem)
+		color: $blue
+		font-weight: 500
+		margin-bottom: 15px
+		+media-breakpoint-down(md)
+			+fs(18rem)
+		+media-breakpoint-down(xs)
+			+fs(15rem)
+	.desc
+		width: 100%
+		text-align: left
+.about-health
+	padding-top: 50px
+	+media-breakpoint-down(lg)
+		padding-top: 0px
+	.pagetitle
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	.flex-center
+		background: #e7edee
+	.about-health-img
+		img
+			width: 100%
+	.box-about-health
+		padding: 0px 30px
+		+media-breakpoint-down(md)
+			padding: 30px
+		+media-breakpoint-down(xs)
+			padding: 15px
+		.title
+			+fs(20rem)
+			font-weight: 600
+			margin-bottom: 30px
+			+media-breakpoint-down(lg)
+				+fs(16rem)
+				margin-bottom: 10px
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+				+fs(15rem)
+	.about-health-desc
+		width: 90%
+		margin: 0 auto
+		margin-top: 20px
+		text-align: center
+		+fs(18rem)
+		+media-breakpoint-down(md)
+			+fs(16rem)
+			width: 100%
+		+media-breakpoint-down(xs)
+			+fs(15rem)
+.about-component
+	margin-top: 50px
+	padding: 100px 0px
+	+pos(rel,null)
+	+media-breakpoint-down(lg)
+		padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+		margin-top: 30px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+		margin-top: 15px
+	+media-breakpoint-up(xl)
+		&:after
+			content: ''
+			background: #cccccc
+			width: 1px
+			height: 140px
+			+pos(abs, 0 null null 16%)
+	.box-component
+		background: color-rgba($blue,0.8)
+		padding: 50px
+		width: 50%
+		+media-breakpoint-down(md)
+			padding: 30px
+			width: 100%
+		+media-breakpoint-down(xs)
+			padding: 15px
+		.title
+			+fs(20rem)
+			color: $white
+			margin-bottom: 30px
+			+media-breakpoint-down(md)
+				+fs(18rem)
+				margin-bottom: 15px
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+				+fs(15rem)
+		.desc
+			color: $white
+.about-charity
+	padding: 50px 50px 0
+	+media-breakpoint-down(md)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 15px
+	.about-charity-img
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
+		img
+			width: 100%
+	.box-about-charity
+		.title
+			+fs(20rem)
+			font-weight: 500
+			margin-bottom: 30px
+			+media-breakpoint-down(md)
+				+fs(18rem)
+			+media-breakpoint-down(sm)
+				margin-bottom: 15px
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+				+fs(15rem)
+		.desc
+			margin-bottom: 30px
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+.about-history
+	background: #e7edee
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.desc
+		text-align: center
+		width: 80%
+		margin: 0 auto
+		margin-bottom: 30px
+		+media-breakpoint-down(lg)
+			margin-bottom: 15px
+		+media-breakpoint-down(md)
+			width: 100%
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	.history-year
+		width: 15%
+		text-align: right
+		margin: -35px auto 0
+		margin-left: 750px
+		+pos(rel,null)
+		z-index: 5
+		+media-breakpoint-down(lg)
+			margin: 0 auto
+			width: 30%
+			text-align: center
+		+media-breakpoint-down(md)
+			margin-top: -25px
+		+media-breakpoint-down(sm)
+			margin-top: -15px
+			width: 50%
+		.slick-prev, .slick-next
+			width: 34px
+			height: 68px
+			+fs(0)
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+transition(all,0.3s)
+			color: darken($white,60%)
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(40rem)
+		.slick-prev
+			&:before
+				content: '\f104'
+			left: -30px
+		.slick-next
+			&:before
+				content: '\f105'
+			right: -40px
+		.item
+			.img
+				+media-breakpoint-down(md)
+					margin: 0 auto
+			.year
+				+fs(68rem)
+				font-weight: bold
+				color: $blue
+				text-align: right
+				text-shadow: -3px -3px 0 $white,3px -3px 0 $white,-3px 3px 0 $white,3px 3px 0 $white
+				+media-breakpoint-down(lg)
+					text-align: center
+				+media-breakpoint-down(sm)
+					+fs(60rem)
+				+media-breakpoint-down(xs)
+					+fs(48rem)
+	.history-nav
+		.slick-prev, .slick-next
+			display: none !important
+		.item
+			padding: 5px 0px
+			cursor: pointer
+			.year-nav
+				text-align: center
+				font-weight: 600
+				color: darken($white,40%)
+				+transition(all 0.4s)
+			&.slick-current
+				background: $blue
+				+bor-rad(20px)
+				.year-nav
+					color: $white
+.about-why
+	.pagetitle
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	.img
+		+media-breakpoint-down(md)
+			margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+.about-why-health
+	background: darken($white,4%)
+	.pagetitle
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	+pos(rel,null)
+	+media-breakpoint-up(xl)
+		&:before
+			content: ''
+			background: #ccc
+			width: 1px
+			height: 90px
+			+pos(abs, 0 null null 50%)
+			+transform(translateX(-50%))
+	padding: 100px 0px
+	+media-breakpoint-down(lg)
+		padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+.about-recipe
+	+pos(rel,null)
+	.pagetitle
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	+media-breakpoint-up(xl)
+		&:before
+			content: ''
+			background: #ccc
+			width: 1px
+			height: 90px
+			+pos(abs, 0 null null 50%)
+			+transform(translateX(-50%))
+	padding: 100px 0px
+	+media-breakpoint-down(lg)
+		padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.list-img
+		.row
+			+media-breakpoint-up(lg)
+				margin-left: -10px
+				margin-right: -10px
+		.col-md-6
+			+media-breakpoint-up(lg)
+				padding: 0 10px
+			+media-breakpoint-down(md)
+				text-align: center
+			.img
+				margin-bottom: 20px
+				+media-breakpoint-down(md)
+					img
+						width: 100%
+				+media-breakpoint-down(sm)
+					img
+						width: 100%
+				&:last-child
+					margin-bottom: 0
+					+media-breakpoint-down(md)
+						margin-bottom: 20px
+.about-solution
+	+pos(rel,null)
+	+media-breakpoint-up(xl)
+		&:before
+			content: ''
+			background: #ccc
+			width: 1px
+			height: 90px
+			+pos(abs, 0 null null 50%)
+			+transform(translateX(-50%))
+	padding: 100px 0px
+	+media-breakpoint-down(lg)
+		padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	background: #dae6eb
+	.bottom-desc
+		width: 80%
+		+media-breakpoint-down(md)
+			width: 100%
+	.list-step
+		margin-top: 30px
+		.stepcol
+			text-align: center
+			.number
+				+fs(50rem)
+				color: #9dd1d9
+				font-weight: bold
+				+media-breakpoint-down(md)
+					+fs(30rem)
+			img
+				margin-bottom: 30px
+			.txt
+				font-weight: bold
+				text-transform: uppercase
+.about-science
+	+pos(rel,null)
+	+media-breakpoint-up(xl)
+		&:before
+			content: ''
+			background: #ccc
+			width: 1px
+			height: 90px
+			+pos(abs, 0 null null 50%)
+			+transform(translateX(-50%))
+	padding: 100px 0px
+	+media-breakpoint-down(lg)
+		padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.pagetitle
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	.img
+		img
+			width: 100%
+	.box-murad
+		+media-breakpoint-down(lg)
+			+pos(static,unset)
+			+transform(none)
+			.murad-title
+				+fs(20rem)
+		+media-breakpoint-down(sm)
+			.murad-title
+				+fs(16rem)
+.block-aboutText
+	background: #e7edee
+	padding: 50px
+	text-align: center
+	+media-breakpoint-down(md)
+		padding: 30px
+	+media-breakpoint-down(xs)
+		padding: 15px

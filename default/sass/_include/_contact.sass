@@ -1,0 +1,54 @@
+.contact-page 
+	padding: 50px 0
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.contact-info
+		margin-top: 70px
+		+media-breakpoint-down(md)
+			margin-top: 30px
+		+media-breakpoint-down(xs)
+			margin-top: 15px
+		.contact-col
+			background: darken($white,4%)
+			+bor-rad(10px)
+			height: 100%
+			padding: 30px 30px 0px
+			text-align: center
+			+media-breakpoint-down(xs)
+				padding: 15px
+			.icon
+				width: 80px
+				height: 80px
+				border: 2px solid darken($white,4%)
+				+bor-rad(50%)
+				background: $white
+				display: flex
+				align-items: center
+				justify-content: center
+				margin: 0 auto
+				margin-top: -70px
+				margin-bottom: 30px
+				+media-breakpoint-down(md)
+					margin-top: 0
+				+media-breakpoint-down(xs)
+					margin-bottom: 15px
+				.fa
+					color: $blue
+					+fs(40rem)
+			.title
+				+fs(16rem)
+				font-weight: bold
+				text-transform: uppercase
+				margin-bottom: 10px
+				+media-breakpoint-down(xs)
+					+fs(13rem)
+			.addr
+				margin-bottom: 30px
+				+media-breakpoint-down(xs)
+					margin-bottom: 15px
+				p
+					+fs(14rem)
+					+media-breakpoint-down(xs)
+						+fs(13rem)

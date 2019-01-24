@@ -1,0 +1,117 @@
+.process
+	margin-top: 112px
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+		margin-top: 55px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.process-title
+		+fs(30rem)
+		line-height: 1.5
+		text-align: center
+		color: $white
+		+media-breakpoint-down(md)
+			+fs(24rem)
+		+media-breakpoint-down(sm)
+			+fs(20rem)
+		+media-breakpoint-down(xs)
+			+fs(16rem)
+.process-table
+	padding-bottom: 50px
+	+media-breakpoint-down(md)
+		padding-bottom: 30px
+	+media-breakpoint-down(xs)
+		padding-bottom: 0px
+	table
+		td
+			border-top: 0
+			border-bottom: 2px solid darken($white,4%)
+			padding: 50px 0px
+			+media-breakpoint-down(md)
+				padding: 30px 0px
+			+media-breakpoint-down(xs)
+				padding: 15px 0px
+			&.product
+				width: 100%
+				.productimg
+					display: block
+					float: left
+					width: 160px
+					+media-breakpoint-down(sm)
+						width: 70px
+					+media-breakpoint-down(xs)
+						width: 50px
+				.productdetail
+					float: left
+					width: calc(100% - 160px)
+					padding-left: 50px
+					+media-breakpoint-down(md)
+						padding-left: 30px
+					+media-breakpoint-down(sm)
+						width: calc(100% - 70px)
+						padding-left: 15px
+					+media-breakpoint-down(xs)
+						width: calc(100% - 50px)
+					.productname
+						+fs(24rem)
+						+media-breakpoint-down(md)
+							+fs(20rem)
+						+media-breakpoint-down(sm)
+							+fs(16rem)
+						+media-breakpoint-down(xs)
+							+fs(13rem)
+							line-height: 1.5
+						a
+							color: $main
+							text-transform: uppercase
+					.productsmall
+						color: darken($white,60%)
+						font-style: italic
+						padding: 10px 0px
+						+media-breakpoint-down(xs)
+							+fs(12rem)
+							padding: 5px 0px
+					.productdesc
+						+media-breakpoint-down(sm)
+							display: none
+						p
+							margin-bottom: 10px
+			&.price
+				text-align: center
+				padding-left: 50px
+				+media-breakpoint-down(md)
+					white-space: nowrap
+					padding-left: 30px
+				+media-breakpoint-down(xs)
+					padding-left: 10px
+					+fs(13rem)
+				span
+					color: $blue
+				.btn-buy
+					display: block
+					text-transform: uppercase
+					padding: 10px 0px
+					width: 180px
+					margin: 0 auto
+					margin-top: 15px
+					background: $blue
+					border-radius: 30px
+					font-weight: 500
+					color: $white
+					overflow: hidden
+					+media-breakpoint-down(md)
+						width: 100%
+						+fs(12rem)
+						padding: 10px
+					+media-breakpoint-down(xs)
+						padding: 5px
+						+fs(10rem)
+						margin-top: 5px
+					&:before
+						background: rgba(255, 255, 255, 0.2)
+					.lnr
+						color: $white
+						padding-right: 10px
+						+media-breakpoint-down(xs)
+							padding-right: 5px

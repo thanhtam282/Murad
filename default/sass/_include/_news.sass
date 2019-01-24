@@ -1,0 +1,692 @@
+.list-news
+	margin-top: 30px
+	+media-breakpoint-down(md)
+		margin-top: 15px
+	.item
+		padding: 0 10px
+		height: auto
+	.viewmore
+		width: 300px
+		display: block
+		margin: 0 auto
+		padding: 10px 0px
+		text-align: center
+		text-transform: uppercase
+		color: $blue
+		border: 1px solid $blue
+		+bor-rad(3px)
+		margin-top: 15px
+		+media-breakpoint-down(md)
+			width: 100%
+	.slick-next,.slick-prev
+		display: none !important
+	.slick-track
+		display: flex
+.newscol
+	margin-bottom: 30px
+	border-bottom: 2px solid darken($white,10%)
+	height: 100%
+	+media-breakpoint-down(xs)
+		margin-bottom: 15px
+	figure
+		.newsimg
+			display: block
+			overflow: hidden
+			img
+				+transition(all,0.3s)
+				width: 100%
+				+media-breakpoint-down(md)
+					width: 100%
+		figcaption
+			.newsname
+				display: -webkit-box
+				display: -ms-flexbox
+				display: -webkit-flex
+				display: flex
+				-webkit-justify-content: left
+				-webkit-box-pack: left
+				-ms-flex-pack: left
+				justify-content: left
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
+				-webkit-line-clamp: 3
+				a
+					color: $main
+					line-height: 1.5rem
+					font-weight: 500
+					+pos(rel,null)
+					display: block
+					padding-bottom: 10px
+					margin-bottom: 10px
+					text-transform: uppercase
+					+media-breakpoint-down(md)
+						+fs(13rem)
+						margin-bottom: 0
+						padding-bottom: 0
+			.newsdesc
+				color: $main
+				+fs(13rem)
+				font-weight: 300
+				display: flex
+				-webkit-justify-content: left
+				-webkit-box-pack: left
+				-ms-flex-pack: left
+				justify-content: left
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
+				-webkit-line-clamp: 4
+				height: 75px
+			time
+				color: darken($white,40%)
+				+fs(13rem)
+				padding: 10px 0px 5px
+				display: block
+				&:before
+					content: '\f073'
+					font-family: 'fontawesome'
+					padding-right: 10px
+		&:hover
+			.newsimg
+				img
+					+transform(scale3d(1.1,1.1,1))
+			figcaption
+				.newsname
+					a
+						color: $blue
+.news-lastest
+	padding-bottom: 50px
+	+media-breakpoint-down(md)
+		padding-bottom: 30px
+	.viewmore
+		color: $blue
+		border: 1px solid $blue
+		+bor-rad(3px)
+		padding: 5px 0px
+		width: 300px
+		display: block
+		text-align: center
+		text-transform: uppercase
+		margin: 0 auto
+		margin-top: 15px
+		+media-breakpoint-down(md)
+			width: 100%
+		&:hover
+			background: $blue
+			color: $white
+			border: 1px solid $blue
+.hot-news
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.pagetitle
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	.newscol
+		height: auto
+		border: 0
+		margin: 0
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+		figure
+			figcaption
+				.newsname
+					a
+						+fs(17rem)
+						margin-bottom: 0
+						font-weight: bold
+						+media-breakpoint-down(md)
+							+fs(15rem)
+						+media-breakpoint-down(xs)
+							+fs(14rem)
+		&.small
+			+media-breakpoint-down(md)
+				margin-bottom: 15px
+			figure
+				figcaption
+					.newsname
+						a
+							+fs(13rem)
+							line-height: 1.4
+							+media-breakpoint-down(md)
+								+fs(11rem)
+	&.hot-blog
+		.big
+			.newscol
+				figure
+					.newsimg
+						height: 379px
+						+media-breakpoint-down(lg)
+							height: 308px
+						+media-breakpoint-down(md)
+							height: 247px
+						+media-breakpoint-down(xs)
+							height: auto
+						img
+							height: 100%
+							width: auto
+							max-width: unset
+							+media-breakpoint-down(xs)
+								width: 100%
+								max-width: 	100%
+.news-page
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.newscol
+		border: 0
+		height: auto
+		margin-bottom: 0
+		figure
+			+pos(rel,null)
+			.newsimg
+				display: block
+				overflow: hidden
+				img
+					+transition(all,0.5s)
+			figcaption
+				padding: 15px 0px
+				.newsname
+					min-height: 0px !important
+					a
+						+fs(15rem)
+						text-transform: uppercase
+						line-height: 1.5
+						margin-bottom: 10px
+						padding: 0
+						font-weight: bold
+						+media-breakpoint-down(xs)
+							+fs(13rem)
+			&:hover
+				.newsimg
+					img
+						+transform(scale3d(1.2,1.2,1))
+		&.small
+			figure
+				figcaption
+					.newsname
+						a
+							+fs(14rem)
+							margin-bottom: 0
+					time
+						padding-top: 0
+.news-group
+	margin-bottom: 30px
+	+media-breakpoint-down(xs)
+		margin-bottom: 15px
+	.newstitle
+		border-bottom: 2px solid $blue
+		color: $white
+		text-align: center
+		text-transform: uppercase
+		span
+			background: $blue
+			display: block
+			max-width: 185px
+			font-weight: bold
+			padding: 10px 0px
+	.news-list
+		margin-top: 30px
+		+media-breakpoint-down(xs)
+			margin-top: 15px
+		.newscol
+			border: 0
+			&.big
+				margin-bottom: 30px
+				+media-breakpoint-down(xs)
+					margin-bottom: 15px
+				figure
+					display: flex
+					+media-breakpoint-down(sm)
+						display: block
+					.newsimg
+						float: left
+						width: 390px
+						height: 350px
+						+media-breakpoint-down(lg)
+							width: 300px
+						+media-breakpoint-down(md)
+							height: 290px
+						+media-breakpoint-down(sm)
+							width: 100%
+							float: none
+							height: auto
+						img
+							width: auto
+							max-width: unset
+							height: 100%
+							+media-breakpoint-down(xs)
+								width: 100%
+								max-width: 100%
+								height: auto
+					figcaption
+						float: left
+						width: calc(100% - 360px)
+						height: auto
+						background: darken($white,4%)
+						padding: 15px
+						+media-breakpoint-down(lg)
+							width: calc(100% - 300px)
+						+media-breakpoint-down(sm)
+							width: 100%
+							float: none
+		&.news-list2
+			.newscol
+				border-bottom: 2px solid darken($white,10%)
+				height: 100%
+	.news-list-sidebar
+		margin-top: 30px
+		+media-breakpoint-down(md)
+			margin-top: 0
+		.newscol
+			margin-bottom: 30px
+			border: 0
+			+media-breakpoint-down(lg)
+				margin-bottom: 29px
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+			figure
+				.newsimg
+					float: left
+					width: 180px
+					height: 165px
+					+media-breakpoint-down(lg)
+						width: 135px
+						height: 120px
+					+media-breakpoint-down(xs)
+						width: 100px
+						height: 90px
+					img
+						width: auto
+						height: 100%
+						max-width: unset
+				figcaption
+					float: left
+					width: calc(100% - 180px)
+					padding: 0
+					padding-left: 20px
+					+media-breakpoint-down(lg)
+						width: calc(100% - 135px)
+					+media-breakpoint-down(xs)
+						width: calc(100% - 100px)
+						padding-left: 15px
+					.newsname
+						display: block
+						a
+							+fs(14rem)
+							margin-bottom: 0
+							padding-bottom: 0
+							+media-breakpoint-down(lg)
+								+fs(11rem)
+					time
+						padding-top: 0
+	.viewmore
+		text-align: center
+		display: block
+		text-transform: uppercase
+		padding: 10px 0px
+		text-align: center
+		width: 180px
+		margin: 0 auto
+		background: $blue
+		+bor-rad(30px)
+		font-weight: 500
+		color: $white
+		margin-top: 20px
+		overflow: hidden
+		+media-breakpoint-down(xs)
+			width: 100%
+			+fs(12rem)
+			padding: 7px 0px
+		&:before
+			background: color-rgba($white,0.2)
+		span
+			padding-right: 15px
+	&.news-group1
+		.newstitle
+			border-bottom: 2px solid $green
+			span
+				background: $green
+		.viewmore
+			background: $green
+	&.news-group2
+		.newstitle
+			border-bottom: 2px solid #3e87cb
+			span
+				background: #3e87cb
+		.viewmore
+			background: #3e87cb
+.news-promotion 
+	margin-bottom: 40px
+	.prev, .next 
+		+fs(18rem)
+		width: 40px
+		height: 40px
+		background: color-rgba($white,0.3)
+		line-height: 40px
+		text-align: center
+		+transition(all,0.5s)
+		opacity: 0
+		+media-breakpoint-down(lg) 
+			opacity: 1 
+		&:hover 
+			background: $black
+			color: $blue  
+	.prev 
+		left: -40px
+		+media-breakpoint-down(lg) 
+			left: 0  
+	.next 
+		right: -40px
+		+media-breakpoint-down(lg) 
+			right: 0  
+	.slidewrap 
+		overflow: hidden
+		&:hover 
+			.prev, .next 
+				opacity: 1 
+			.prev 
+				left: 0 
+			.next 
+				right: 0   
+	.promotion-list 
+		.promotion-col 
+			figure 
+				+pos(rel,null)
+				.promotion-img 
+					display: block
+					+pos(rel,null)
+					img 
+						width: 100% 
+					.img-overlay 
+						+pos(abs, 0 null 0 0)
+						right: 0
+						background: linear-gradient(color-rgba($black,0), color-rgba($blue,0.8))
+						+transition(all,0.5s)  
+				figcaption 
+					+pos(abs, null 0 0 0)
+					padding: 15px
+					.promotion-name 
+						+fs(18rem)
+						font-weight: 500
+						line-height: 1.5
+						text-transform: uppercase
+						text-shadow: 0 3px 15px color-rgba($black,0.1)
+						a 
+							color: $white   
+				&:hover 
+					.promotion-img 
+						.img-overlay 
+							opacity: 0.5
+.sidebar-category 
+	margin: 40px 0
+	+media-breakpoint-down(md)
+		margin-top: 0
+		margin-bottom: 30px
+	+media-breakpoint-down(xs)
+		margin-bottom: 15px
+	ul
+		+media-breakpoint-down(md)
+			display: none
+		li 
+			background: darken($white,5%)
+			margin-bottom: 1px
+			a 
+				display: block
+				padding: 10px 15px
+				color: $main 
+			&.active 
+				a 
+					background: $blue
+					color: $white
+					+media-breakpoint-down(md)
+						background: none
+						color: $blue
+.pages
+	text-align: center
+	.pagination 
+		+bor-rad(0)
+		margin: 0
+		padding: 0 15px
+		li 
+			display: inline-block
+			vertical-align: middle
+			margin-left: 20px
+			text-align: center
+			a, span 
+				color: $main
+				font-weight: 500 
+			&:hover 
+				a, span 
+					color: $blue  
+			&.active
+				a, span 
+					color: $blue
+					font-weight: 700
+					+fs(20rem)
+.news-detail
+	margin: 50px 0px
+	+media-breakpoint-down(md)
+		margin: 30px 0px
+	+media-breakpoint-down(xs)
+		margin: 15px 0px
+	.news-head 
+		border-bottom: 1px solid darken($white,10%)
+		margin-bottom: 15px
+		time
+			&:before
+				content: '\f073'
+				font-family: 'fontawesome'
+				padding-right: 15px
+	.news-name 
+		+fs(28rem)
+		line-height: 1.3
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: 10px 
+	time 
+		+fs(14rem)
+		font-weight: 700
+		color: $main
+		display: inline-block
+		padding: 3px 0px
+		margin-bottom: 10px  
+	.content
+		p
+			color: $main
+.orther-news 
+	margin-bottom: 40px
+	.pagetitle 
+		+fs(16rem)
+	.post-list 
+	.post 
+		margin-bottom: 15px
+		figure 
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
+			.post-img 
+				display: flex
+				width: 80px
+				height: 80px
+				+bor-rad(50%)
+				overflow: hidden
+				justify-content: center
+				align-items: center
+				float: left
+				img 
+					height: 100%
+					width: auto
+					max-width: unset  
+			figcaption 
+				width: calc(100% - 80px)
+				float: left
+				padding-left: 15px
+				.post-name 
+					+fs(13rem)
+					// text-transform: uppercase
+					font-weight: 500
+					margin-bottom: 5px
+					line-height: 1.5
+					a 
+						color: $black
+						&:hover 
+							color: $blue   
+				time 
+					font-weight: 700
+					color: darken($white,40%)
+					+fs(12rem)
+// event
+.event-page 
+	margin: 40px 0
+	+media-breakpoint-down(xs)
+		margin: 20px 0px
+	.event-info 
+		margin-top: -20px
+		margin-bottom: 20px
+		time 
+			display: block
+			color: darken($white,40%)
+			+fs(13rem)
+			line-height: 1.5
+			margin-bottom: 5px
+			&:before 
+				content: '\f073'
+				margin-right: 5px
+				font-family: 'fontawesome'    
+
+.hot-event 
+	.event-col 
+		display: block
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+		figure 
+			+pos(rel,null)
+			.event-img
+				overflow: hidden
+				img 
+					width: 100%
+					height: 204px
+					object-fit: cover
+					+transition(all 0.5s)
+					+media-breakpoint-down(lg) 
+						height: 188px 
+					+media-breakpoint-down(xs) 
+						height: auto
+			figcaption
+				padding-top: 15px
+				.event-name 
+					width: 100%
+					+fs(16rem)
+					font-weight: 500
+					text-transform: uppercase
+					margin-bottom: 10px
+					line-height: 1.5
+					color: $main
+					+media-breakpoint-down(xs) 
+						+fs(14rem)
+				.event-desc
+					color: $main
+				.link 
+					+fs(13rem)
+					text-transform: uppercase
+					padding: 5px 20px
+					border: 1px solid $main
+					+transition(all,0.3s)
+					color: $main
+					width: 150px
+					text-align: center
+					display: none
+					&:hover 
+						background: $blue
+						border-color: $blue
+						color: $white
+			&:hover
+				.event-img 
+					img
+						+transform(scale3d(1.2,1.2,1))
+				figcaption 
+					.event-name
+						color: $blue
+		&.big 
+			figure 
+				.event-img 
+					img 
+						height: 500px
+						+media-breakpoint-down(lg) 
+							height: 470px 
+						+media-breakpoint-down(xs) 
+							height: auto
+.event-list 
+	+ .pages 
+		margin-top: 0 
+	.col-12 
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+	.event-col 
+		display: block
+		height: 100%
+		border-bottom: 2px solid darken($white,10%)
+		figure 
+			+pos(rel,null)
+			.event-img
+				overflow: hidden
+				img 
+					width: 100%
+					+transition(all 0.5s)
+			figcaption 
+				padding: 15px 0
+				.event-name 
+					+fs(14rem)
+					color: $main
+					line-height: 1.5
+					font-weight: 500
+					margin-bottom: 5px
+					min-height: 48px
+					+media-breakpoint-down(xs) 
+						min-height: auto
+						margin-bottom: 0
+				time 
+					display: block
+					color: darken($white,40%)
+					+fs(13rem)
+					line-height: 1.5
+					margin-bottom: 5px
+					&:before 
+						content: '\f073'
+						margin-right: 5px
+						font-family: 'fontawesome'  
+				.event-des 
+					+fs(14rem)
+					color: darken($white,40%)
+					margin-bottom: 5px
+			&:hover
+				.event-img 
+					img
+						+transform(scale3d(1.2,1.2,1))
+				figcaption 
+					.event-name
+						color: $blue
+.block-sidebarCateWrap
+	display: none
+.newspage-sidebarWrap
+	margin-top: 50px
+	+media-breakpoint-down(md)
+		margin-top: 30px
+	+media-breakpoint-down(xs)
+		margin-top: 15px
+	.block-sidebarCateWrap
+		display: block

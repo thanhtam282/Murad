@@ -1,0 +1,37 @@
+.breadcrumbwrap 
+	background: darken($white,5%)
+	.breadcrumbimg
+		img
+			width: 100%
+.breadcrumb 
+	margin: 0
+	padding: 10px 0
+	+bor-rad(0)
+	background: none
+	+media-breakpoint-down(xs)
+		display: none
+	li 
+		float: left
+		color: $main
+		+fs(13rem)
+		// &:first-child
+		// 	&:before
+		// 		content: '\f0c9'
+		// 		font-family: 'fontawesome'
+		// 		margin-right: 5px
+		// 	a
+		// 		color: $main
+		+ li 
+			&:before 
+				content: '|'
+				margin: 0px 10px
+				color: darken($white,40%)  
+		a 
+			color: darken($white,40%)
+			&:hover 
+				color: $main  
+		// &.active 
+		// 	a 
+		// 		span 
+		// 			color: $green     
+

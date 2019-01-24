@@ -1,0 +1,243 @@
+footer
+	background: darken($white,4%)
+	padding: 50px 0px 0px
+	.col-lg-3
+		+media-breakpoint-up(lg)
+			width: 20%
+	+media-breakpoint-down(md)
+		padding: 0px
+	.subscribe
+		.box-subscribe
+			.subscribefrm
+				background: $white
+				+bor-rad(20px)
+				width: 325px
+				margin: 0 auto
+				padding: 3px
+				height: 40px
+				margin-bottom: 40px
+				+media-breakpoint-down(md)
+					width: 100%
+				input
+					width: calc(100% - 111px)
+					float: left
+					background: none
+					border: none
+					padding: 8px 15px
+					color: $main
+				.subscribebutton
+					color: $white
+					background: #737d83
+					+bor-rad(20px)
+					padding: 6px 20px
+					+transition(all,0.3s)
+					text-transform: uppercase
+					&:hover
+						background: $blue
+.footer-col 
+	+media-breakpoint-down(md) 
+		margin-bottom: 15px 
+	.ftitle 
+		+fs(16rem)
+		text-transform: uppercase
+		margin-bottom: 20px
+		color: #5b6368
+		font-weight: 600
+	table 
+		tr 
+			td 
+				color: $main
+				cursor: pointer
+				line-height: 20px
+				+transition(all, 0.3s)
+				+fs(14rem)
+				line-height: 1.5rem
+				.fa 
+					padding-right: 15px  
+			&:hover 
+				td 
+					color: $blue
+	ul 
+		li 
+			a 
+				color: $main
+				letter-spacing: 1px
+				line-height: 1.5rem
+				font-weight: 300
+				+fs(12rem)
+				&:hover 
+					color: $blue
+.list-social 
+	float: right
+	width: 150px
+	margin: 0 auto
+	+media-breakpoint-down(md)
+		float: left
+		width: 100%
+	ul 
+		float: left
+		width: 100%
+		li 
+			display: inline-block
+			margin-right: 10px
+			margin-bottom: 10px
+			a 
+				width: 35px
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 35px
+				+fs(20rem)
+				background: $white
+				+bor-rad(50%)
+				.fa 
+					color: #737d83
+					+transition(all,0.3s)
+				&:hover 
+					.fa 
+						color: $blue
+.copyright
+	background: #737d83
+	padding: 30px 0px
+	margin-top: 30px
+	+media-breakpoint-down(md)
+		margin-top: 0
+		text-align: center
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	p
+		color: #c4cbd0
+		margin: 0
+		+fs(12rem)
+		+media-breakpoint-down(sm)
+			margin-bottom: 15px
+		+media-breakpoint-down(xs)
+			margin-bottom: 5px
+			text-align: center
+			font-size: 11px
+	.list-privacy
+		float: right
+		+media-breakpoint-down(md)
+			float: none
+		ul
+			li
+				float: left
+				+media-breakpoint-down(md)
+					float: none
+					display: inline-block
+				a
+					color: #c4cbd0
+					+pos(rel,null)
+					padding: 0px 15px
+					+fs(12rem)
+					+media-breakpoint-down(xs)
+						padding: 0 3px
+						+fs(11rem)
+					&:before
+						content: ''
+						background: #c4cbd0
+						width: 1px
+						height: 15px
+						+pos(abs, 50% 0 null null)
+						+transform(translateY(-50%))
+						+media-breakpoint-down(xs)
+							display: none
+				&:last-child
+					a
+						&:before
+							background: none
+.tool-fix
+	+pos(fix, 150px 0 null null)
+	z-index: 10
+	+transform(translateX(112px))
+	+transition(all,0.3s)
+	+media-breakpoint-down(md) 
+		display: none 
+	&:hover 
+		+transform(translateX(0))  
+.tool-link 
+	.tool-menu
+		float: left
+		width: 160px
+		li 
+			width: 100%
+			float: left
+			background: url(../img/bg3.png) no-repeat center center
+			background-size: cover
+			+header-sd()
+			padding: 0 10px
+			margin-bottom: 10px
+			border-top-left-radius: 30px
+			border-bottom-left-radius: 30px
+			a 
+				color: $white
+				+fs(12rem)
+				display: flex
+				align-items: center
+				width: 100%
+				height: 48px
+				+transition(all,0.3s)
+				text-decoration: none
+				img
+					display: block
+					float: left
+					text-align: center
+					padding: 0
+					line-height: 45px
+					+transition(all,0.3s)
+					padding-right: 16px
+				span 
+					color: $white
+					font-weight: 300
+					text-transform: uppercase
+					padding: 5px 0px
+					text-shadow: 1px 1px $main
+					+transition(all,0.3s)
+			&:last-child
+				a
+					span
+						margin-top: -20px
+			&:hover
+				a
+					span
+						color: $main
+						text-shadow: 0px 0px $main
+	.list-social-fix
+		float: right
+		margin-top: -20px
+		ul
+			height: 20px
+			margin-top: -6px
+			li
+				display: inline-block
+				background: none
+				float: none
+				width: auto
+				margin: 0
+				+bor-rad(0)
+				box-shadow: none
+				padding: 0 5px
+				a
+					display: block
+					+fs(13rem)
+.up
+	position: fixed
+	right: 20px
+	bottom: 20px
+	width: 40px
+	height: 40px
+	color: $white
+	background: $blue
+	line-height: 35px
+	text-align: center
+	font-size: 1.75rem
+	cursor: pointer
+	-webkit-transition: all 0.3s
+	transition: all 0.3s
+	opacity: 0
+	z-index: 10
+	&:before
+		content: '\f106'
+		font-family: 'fontawesome'
+	&.appear
+		opacity: 1

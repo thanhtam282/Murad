@@ -1,0 +1,624 @@
+.product-page
+	padding: 50px 0px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px 0
+	+media-breakpoint-down(xs)
+		padding: 15px 0px 0
+	.product-lastview
+		padding-top: 50px
+		+media-breakpoint-down(md)
+			padding-top: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 0
+			padding-top: 15px
+.list-product
+	margin-top: 50px
+	+media-breakpoint-down(md)
+		margin-top: 30px
+	+media-breakpoint-down(xs)
+		margin-top: 15px
+	.item
+		+media-breakpoint-down(xs)
+			padding: 0 5px
+	.col-lg-4
+		height: auto
+		+media-breakpoint-up(lg)
+			padding: 0 10px
+		+media-breakpoint-down(md)
+			margin-bottom: 200px
+			&:last-child
+				margin: 0
+	.slick-dots
+		+media-breakpoint-down(lg)
+			display: none !important
+	.slick-prev, .slick-next
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		z-index: 5
+		+fs(0)
+		color: $main
+		text-shadow: 0 1px 3px color-rgba($main,0.1)
+		+transition(all,0.3s)
+		+media-breakpoint-down(lg)
+			display: none !important
+		&:before
+			content: ''
+			font-family: 'fontawesome'
+			+fs(40rem)
+			width: 25px
+			height: 25px
+			+transition(all,0.3s)
+			opacity: 0
+			+media-breakpoint-down(sm)
+				+fs(18rem)
+		&:hover
+			background: $blue
+			color: $white
+			&:before
+				padding: 0 15px
+	.slick-prev
+		left: -30px
+		&:before
+			content: '\f104'
+	.slick-next
+		right: -30px
+		&:before
+			content: '\f105'
+	&:hover
+		.slick-prev, .slick-next
+			&:before
+				opacity: 1
+.product-tabs
+	margin-top: 50px
+	+media-breakpoint-down(md)
+		margin-top: 30px
+	.nav-tabs
+		border: 0
+		border-top: 1px solid darken($white,10%)
+		border-bottom: 1px solid darken($white,10%)
+		padding: 5px 0px
+		text-align: center
+		+media-breakpoint-down(lg)
+			display: none
+		.nav-item
+			margin: 0
+			margin-left: 15px
+			float: none
+			display: inline-block
+			+media-breakpoint-down(lg)
+				display: block
+				width: 100%
+				margin: 0
+			&:last-child
+				margin: 0
+				.nav-link
+					&:before
+						background: none
+			.nav-link
+				border: 0
+				+fs(16rem)
+				text-transform: uppercase
+				+bor-rad(0)
+				font-weight: 400
+				display: flex
+				align-items: center
+				justify-content: center
+				color: darken($white,40%)
+				padding: 10px 15px
+				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					padding: 10px
+					+fs(14rem)
+					background: darken($white,4%)
+				&:before
+					content: ''
+					background: darken($white,40%)
+					width: 1px
+					height: 20px
+					+pos(abs, 50% 0 null null)
+					+transform(translateY(-50%))
+					+media-breakpoint-down(lg)
+						display: none
+				&.active
+					border: 0
+					+bor-rad(20px)
+					background: $blue
+					color: $white
+					+media-breakpoint-down(lg)
+						+bor-rad(0px)
+					&:first-child
+						&:before
+							background: none
+					&:hover
+						color: $white
+				&:hover
+					color: $blue
+.productcol
+	height: 100%
+	+pos(rel,null)
+	&.green
+		.btn-buy
+			a
+				background: $green
+	&.pink
+		.btn-buy
+			a
+				background: $pink
+	&.purple
+		.btn-buy
+			a
+				background: $purple
+	&.blue
+		.btn-buy
+			a
+				background: $blue
+	&.brown
+		.btn-buy
+			a
+				background: $brown
+	figure
+		.productimg
+			display: block
+			text-align: center
+			overflow: hidden
+			img
+				+transition(all,0.4s)
+				margin: 0 auto
+				+media-breakpoint-down(xs)
+					width: 80%
+		figcaption
+			text-align: center
+			padding: 30px 24px 80px
+			+media-breakpoint-down(lg)
+				padding: 30px 10px 60px
+			+media-breakpoint-down(xs)
+				padding: 15px 0px 50px
+			.productname
+				display: -webkit-box
+				display: -ms-flexbox
+				display: -webkit-flex
+				display: flex
+				-webkit-justify-content: left
+				-webkit-box-pack: left
+				-ms-flex-pack: left
+				justify-content: left
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
+				-webkit-line-clamp: 2
+				line-height: 1.5
+				min-height: 44px
+				a
+					color: $main
+					text-transform: uppercase
+					line-height: 1.3rem
+					font-weight: bold
+					+fs(13rem)
+					+media-breakpoint-down(xs)
+						+fs(12rem)
+			.productdesc
+				color: $main
+				+fs(13rem)
+				margin-bottom: 10px
+				font-weight: 300
+				font-style: italic
+				margin-top: 5px
+				+pos(rel,null)
+				display: -webkit-box
+				display: -ms-flexbox
+				display: -webkit-flex
+				display: flex
+				min-height: 48px
+				-webkit-justify-content: left
+				-webkit-box-pack: left
+				-ms-flex-pack: left
+				justify-content: left
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
+				-webkit-line-clamp: 2
+				+media-breakpoint-down(md)
+					min-height: 40px
+				&:before
+					content: ''
+					background: $main
+					width: 50px
+					height: 1px
+					+pos(abs, null null 0 50%)
+					+transform(translateX(-50%))
+					+media-breakpoint-down(md)
+						display: none
+			.productprice
+				color: $main
+				font-weight: bold
+				+fs(17rem)
+				+media-breakpoint-down(xs)
+					+fs(13rem)
+			.favorite 
+				margin-top: 5px
+				+fs(13rem)
+				li 
+					display: inline-block
+					vertical-align: middle
+					a 
+						color: darken($white,40%)
+						&:before 
+							content: '\f006'
+							font-family: 'fontawesome' 
+						&:hover 
+							color: $yellow
+					&.active 
+						a 
+							color: $yellow
+							&:before 
+								content: '\f005'
+		&:hover
+			.productimg
+				img
+					+transform(scale3d(1.1,1.1,1))
+			figcaption
+				.productname
+					a
+						color: $blue
+		.btn-buy
+			+pos(abs, null null 15px 50%)
+			+transform(translateX(-50%))
+			+media-breakpoint-down(lg)
+				bottom: 0
+			+media-breakpoint-down(xs)
+				width: 100%
+				bottom: 5px
+			a
+				text-align: center
+				display: block
+				text-transform: uppercase
+				padding: 10px 0px
+				text-align: center
+				width: 180px
+				margin: 0 auto
+				background: $orange
+				+bor-rad(30px)
+				font-weight: 500
+				color: $white
+				margin-top: 20px
+				overflow: hidden
+				+media-breakpoint-down(xs)
+					width: 100%
+					+fs(11rem)
+					padding: 7px 0px
+				&:before
+					background: color-rgba($white,0.2)
+				span
+					padding-right: 20px
+					+media-breakpoint-down(xs)
+						padding-right: 10px
+.category-info 
+	margin-bottom: 30px
+	// .amount 
+	// 	float: left
+	// 	clear: left
+	// 	color: darken($white,40%)
+	// 	+fs(12rem)
+	// 	margin-top: 15px 
+	// .product-sort 
+	// 	float: right
+	// 	select 
+	// 		border: 1px solid darken($white,10%)
+	// 		+bor-rad(3px)
+	// 		padding: 5px 10px
+	// 		color: darken($white,60%)   
+.slidewrap 
+	+pos(rel,null)
+	+flexbox
+	margin-bottom: 30px
+	+media-breakpoint-down(xs) 
+		margin-bottom: 20px 
+	.product-name 
+		+fs(15rem)
+		font-weight: 700
+		color: $blue
+		background: lighten($blue,65%)
+		padding: 10px
+		margin: 10px 0
+		+bor-rad(5px)
+		width: 100% 
+	.promotion 
+		color: $white
+		+bor-rad(3px)
+		+fs(11rem)
+		font-weight: 700
+		text-transform: uppercase
+		line-height: 1
+		padding: 3px 5px
+		margin-bottom: -17px
+		+pos(rel,null)
+		z-index: 5
+		&.new 
+			background: $blue 
+		&.sale 
+			background: $blue  
+	.product-slide 
+		width: calc(100% - 100px)
+		margin-left: 100px
+		+media-breakpoint-down(md) 
+			width: calc(100% - 64px)
+			margin-left: 64px 
+		+media-breakpoint-down(xs) 
+			width: 100%
+			margin-left: 0 
+			margin-bottom: 15px
+		.item 
+			.fancybox 
+				+flexbox
+				width: 100%
+				height: 480px
+				justify-content: center
+				align-items: center
+				+media-breakpoint-down(md) 
+					height: 350px 
+				+media-breakpoint-down(xs) 
+					height: 200px 
+				img 
+					max-width: 100%
+					max-height: 100%
+					+media-breakpoint-down(md) 
+						max-width: 100%
+						max-height: 100%     
+	.product-nav 
+		+pos(abs, 0 null null 0)
+		width: 84px
+		+media-breakpoint-down(md) 
+			width: 64px 
+		+media-breakpoint-down(xs) 
+			+pos(rel,null)
+			width: 100%
+		.slick-prev, .slick-next 
+			+fs(0)
+			display: block
+			width: 100%
+			text-align: center
+			line-height: 1
+			color: darken($white,40%)
+			+media-breakpoint-down(xs) 
+				+pos(abs, 50% null null null)
+				+transform(translateY(-50%))
+				z-index: 5
+				width: unset 
+			&:hover 
+				color: $main 
+			&:before 
+				content: ''
+				font-family: 'fontawesome'
+				+fs(28rem)  
+		.slick-prev
+			margin-bottom: 30px
+			+media-breakpoint-down(md)
+				margin-bottom: 0
+			+media-breakpoint-down(xs) 
+				left: 0 
+			&:before 
+				content: '\f106'
+				+media-breakpoint-down(xs) 
+					content: '\f104'   
+		.slick-next
+			margin-top: 30px
+			+media-breakpoint-down(md)
+				margin-top: 0
+			+media-breakpoint-down(xs) 
+				right: 0 
+			&:before 
+				content: '\f107'
+				+media-breakpoint-down(xs) 
+					content: '\f105'   
+		.item 
+			padding: 5px 0
+			cursor: pointer
+			border: 1px solid darken($white,10%)
+			margin-bottom: 10px
+			+media-breakpoint-down(xs) 
+				padding: 0 5px
+				width: 60% !important
+				margin-bottom: 0
+				margin-right: 10px
+			&.slick-current
+				+pos(rel,null)
+				&:before
+					content: ''
+					background: color-rgba($black,0.5)
+					+pos(abs, 0 0 0 0)
+					width: 100%
+					height: 100%
+			.img 
+				width: 80px
+				height: 80px
+				+flexbox
+				justify-content: center
+				align-items: center
+				border: 1px solid darken($white,20%)
+				cursor: pointer
+				overflow: hidden
+				+transition(all,0.5s)
+				+media-breakpoint-down(md) 
+					width: 60px
+					height: 60px 
+				+media-breakpoint-down(xs) 
+					width: 100%
+					height: 70px 
+				img 
+					max-width: 45%
+					width: 100%
+					+media-breakpoint-down(xs)
+						max-width: 30%
+			&.slick-current
+				.img
+					border: 1px solid $blue
+.product-info
+	.product-name
+		+fs(24rem)
+		text-transform: uppercase
+		+media-breakpoint-down(md)
+			+fs(20rem)
+		+media-breakpoint-down(xs)
+			+fs(16rem)
+			line-height: 1.5
+			font-weight: 600
+	.smalltitle
+		color: darken($white,40%)
+		font-style: italic
+		padding: 5px 0px
+	.list-start
+		.fa
+			color: #ffcf00
+	.product-overview
+		.group
+			padding: 10px 0px
+			border-bottom: 1px solid darken($white,8%)
+			span
+				width: 200px
+				float: left
+				display: block
+				font-weight: bold
+				+fs(14rem)
+				padding-right: 20px
+				+media-breakpoint-down(xs)
+					float: none
+					width: 100%
+					margin-bottom: 5px
+			.value
+				float: left
+				width: calc(100% - 200px)
+				+fs(14rem)
+				+media-breakpoint-down(xs)
+					float: none
+					width: 100%
+				&.price
+					+fs(18rem)
+					color: $blue
+					font-weight: 600
+				p
+					margin-bottom: 15px
+					+media-breakpoint-down(xs)
+						margin-bottom: 0
+	.buynow
+		background: $blue
+		width: 220px
+		display: block
+		padding: 10px 0
+		text-align: center
+		color: $white
+		font-weight: bold
+		text-transform: uppercase
+		+bor-rad(20px)
+		margin-top: 15px
+		+media-breakpoint-down(xs)
+			+pos(fix, null null 0 0)
+			width: 100%
+			+bor-rad(0)
+			z-index: 9
+		span
+			padding-right: 10px
+		&:before
+			background: color-rgba($white,0.2)
+.product-description 
+	padding-top: 50px
+	+media-breakpoint-down(md)
+		padding-top: 30px
+	+media-breakpoint-down(sm)
+		padding-top: 15px
+	.nav-tabs 
+		border: 0
+		border-bottom: 2px solid $blue
+		+media-breakpoint-down(md)
+			display: none
+		.nav-item 
+			margin: 0
+			margin-right: 10px
+			+media-breakpoint-down(md) 
+				width: 100% 
+			.nav-link 
+				border-top-left-radius: 20px
+				border-top-right-radius: 20px
+				padding: 0
+				+fs(16rem)
+				border: 0
+				padding: 10px 20px
+				background: darken($white, 10%)
+				text-transform: uppercase
+				color: darken($white,40%)
+				+media-breakpoint-down(md)
+					+bor-rad(0)
+					+fs(14rem)
+				span
+					font-weight: 500
+				&.active 
+					color: $white
+					font-weight: bold
+					background: $blue
+					+media-breakpoint-down(md)
+						background: none
+						color: $blue
+	.content
+		&.closeContent
+			height: 250px
+			overflow: hidden
+	.tab-content
+		padding: 30px 0px
+		border-bottom: 1px solid darken($white,10%)
+		+media-breakpoint-down(sm) 
+			padding: 10px 0
+		
+		strong
+			margin-bottom: 15px
+			em
+				font-weight: bold
+		img
+			width: 100% !important
+			height: 100% !important
+		ul 
+			li
+				margin-bottom: 5px 
+				&:last-child 
+					margin: 0 
+				&:before
+					width: 7px
+					height: 7px
+					background: #d9d9d9
+		.listawards
+			ul
+				padding: 0
+				li
+					&:before
+						display: none
+					display: inline-block
+					+media-breakpoint-down(xs)
+						width: 33.3%
+						float: left
+					img
+		.btn-readmore
+			text-align: left
+			+fs(16rem)
+			color: $blue
+			margin-top: 15px
+			display: none
+			&:hover
+				text-decoration: underline
+.product-detail-page
+	.full-width
+		width: 100%
+		padding: 0
+.btn-shownav
+	background: $blue
+	padding: 10px
+	display: none
+	color: $white
+	font-weight: 600
+	&:before
+		content: '\f0c9'
+		font-family: 'fontawesome'
+		padding-right: 10px
+	+media-breakpoint-down(md)
+		display: block

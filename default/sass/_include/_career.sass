@@ -1,0 +1,237 @@
+.career-page
+	padding: 50px 0
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.carerrtitle
+		+fs(24rem)
+		color: $blue
+		text-transform: uppercase
+		+media-breakpoint-down(md)
+			+fs(20rem)
+	time
+		+fs(13rem)
+		color: darken($white,60%)
+		padding: 15px 0px
+		display: block
+		&:before
+			content: '\f073'
+			font-family: 'fontawesome'
+			padding-right: 10px
+	.career-detail
+		.career-img
+			img
+				width: 100%
+		.title
+			font-weight: bold
+			text-transform: uppercase
+			margin-bottom: 10px
+	.content
+		ul
+			li
+				line-height: 25px
+				&:before
+					background: #d9d9d9
+					width: 8px
+					height: 8px
+	.share
+		margin-top: 15px
+		float: left
+		width: 100%
+	.job-wrap 
+		margin-top: 30px
+		+media-breakpoint-down(xs)
+			margin-top: 15px
+		.table 
+			// border: 1px solid darken($white,10%)
+			margin: 0
+			padding: 0
+			// min-width: 800px
+			th, td 
+				background: $white
+				vertical-align: middle
+				padding: 10px
+				+fs(14rem)
+				border: none
+				a 
+					color: $black
+					&:hover 
+						color: $blue  
+				.new 
+					display: inline-block
+					background: $blue
+					color: $white
+					text-align: center
+					padding: 5px 20px
+					+bor-rad(20px)
+					+media-breakpoint-down(xs)
+						padding: 3px 10px
+				.hot 
+					display: inline-block
+					background: $amber
+					color: $white
+					text-align: center
+					padding: 2px 10px
+					+bor-rad(3px) 
+				&:last-child 
+					width: 70px  
+			th 
+				color: $main
+				text-transform: uppercase
+				border-bottom: 2px solid $blue
+			td 
+				border-bottom: 1px solid darken($white,10%)
+				&:first-child 
+					border-left: 1px solid darken($white,10%)
+				&:last-child 
+					border-right: 1px solid darken($white,10%)  
+			tr 
+				&:first-child 
+					td 
+						border-top: 1px solid darken($white,10%)
+						&:first-child 
+							+bor-rad(5px 0 0 0) 
+						&:last-child 
+							+bor-rad(0 5px 0 0)   
+				&:last-child 
+					td 
+						&:first-child 
+							+bor-rad(0 0 0 5px) 
+						&:last-child 
+							+bor-rad(0 0 5px 0)   
+				&:nth-child(even) 
+					td 
+						background: darken($white,3%)  
+				&:last-child 
+					td 
+  						// border-bottom: none
+				&:hover 
+					td 
+						background: lighten($blue,58%)
+						a 
+							color: $blue      
+	.btn-wrap 
+		margin-bottom: 20px 
+	.btn-back 
+		color: $main
+		margin-right: 30px
+		&:before 
+			content: '\f104'
+			font-family: 'fontawesome'
+			margin-right: 5px 
+		&:hover 
+			color: $blue  
+	.btn-apply, .frame-link 
+		+mainbutton
+		margin-right: 10px
+	.btn-apply
+		display: inline-block
+		background: $blue
+		font-size: 0.8125rem
+		-moz-appearance: none
+		-webkit-appearance: none
+		appearance: none
+		padding: 0 25px
+		line-height: 30px
+		border-radius: 50px
+		font-weight: 600
+		text-transform: uppercase
+		color: $white
+		margin-right: 10px
+		&:before
+			content: '\f019'
+			font-family: 'fontawesome'
+			padding-right: 10px
+	.download-link 
+		+mainbutton
+		background: $grey
+		&:hover 
+			background: lighten($grey,5%)  
+	h3 
+		color: $blue
+		font-weight: 600  
+
+.apply-frm 
+	padding-top: 20px
+	.col-left, .col-right 
+		width: 50%
+		float: left
+		+media-breakpoint-down(sm) 
+			width: 100%
+			float: none
+			padding: 0  
+	.col-left 
+		padding-right: 15px
+		+media-breakpoint-down(sm) 
+			padding: 0  
+	.col-right 
+		padding-left: 15px
+		+media-breakpoint-down(sm) 
+			padding: 0  
+	h4 
+		color: $black
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: 15px
+		+fs(15rem)
+		// border-left: 3px solid $brown
+		line-height: 1.5
+ 		// padding: 0 10px
+	.form-group 
+		margin-bottom: 10px
+		clear: both
+		&:before, &:after 
+			content: ''
+			display: table
+			width: 100%
+			clear: both  
+	label 
+		margin-bottom: 5px
+		.required 
+			color: $red  
+	.form-control 
+		+bor-rad(0)
+		+fs(14rem)
+		padding: 10px 15px
+		border: 1px solid darken($white,10%)
+		&:hover 
+			border-color: lighten($blue,50%) 
+		&:active, &:focus 
+			border-color: $blue  
+	textarea 
+		min-height: 200px 
+	.btn 
+		+mainbutton  
+.posthead
+	+fs(16rem)
+	font-weight: bold
+	color: $blue
+	margin-bottom: 5px
+.lastjob-view
+	float: left
+	width: 100%
+	.job-wrap
+		.table
+			th
+				+fs(20rem)
+				+media-breakpoint-down(xs)
+					+fs(16rem)
+.career-box
+	.career-contact
+		margin-top: 20px
+		background: darken($white,5%)
+		padding: 15px 15px 0px
+		+bor-rad(5px)
+		.cc-title
+			font-weight: bold
+			margin-bottom: 6px
+		.cc-author
+			margin-bottom: 6px
+		ul
+			margin-bottom: 6px
+			li
+				+fs(14rem)
+				color: darken($white,60%)
+				.fa
+					padding-right: 10px

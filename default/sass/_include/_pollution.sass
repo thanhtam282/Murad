@@ -1,0 +1,55 @@
+.pollution
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.subtitle
+		text-align: center
+		margin-bottom: 15px
+	.pagetitle
+		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			margin-bottom: 15px
+.pollution-skin
+	padding: 50px 0px
+	+media-breakpoint-down(md)
+		padding: 30px 0px
+	+media-breakpoint-down(xs)
+		padding: 15px 0px
+	.bottom-title
+		text-align: center
+		margin: 0 auto
+		margin-bottom: 15px
+		margin-top: 15px
+		width: 50%
+		+media-breakpoint-down(md)
+			width: 100%
+	.slick-track
+		display: flex
+	.item
+		padding: 0 15px
+		height: auto
+		+media-breakpoint-down(md)
+			padding: 0 5px
+		.productcol
+			background: $white
+			padding-top: 30px
+			padding-bottom: 10px
+			height: 100%
+			+media-breakpoint-down(lg)
+				padding-bottom: 20px
+			+media-breakpoint-down(sm)
+				background: none
+				padding-top: 0
+			figure
+				.btn-buy
+					bottom: 30px
+					+media-breakpoint-down(lg)
+						bottom: 20px
+	&.hotbuy
+		background: #e7edee
+		.item
+			.productcol
+				background: none
+

@@ -83,7 +83,7 @@ gulp.task('css', function () {
 gulp.task('scripts', function () {
 	return gulp.src('./_components/**/**.js')
 		.pipe(srcmap.init())
-		.pipe(concat('main.min.js'))
+		.pipe(concat('custom_2019.min.js'))
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))

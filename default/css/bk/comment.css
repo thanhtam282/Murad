@@ -1,0 +1,97 @@
+.pcommentpanel {font-family:'Open Sans',Arial, Tahoma;}
+.journalTools {margin-bottom:22px;}
+.journalEditor, .jcmt .cmteditarea {font-family:'Open Sans',Arial, Tahoma;display:inline-block;width:100%;position:relative;background: #fff; margin:10px 0 0; padding:15px 2%; border: 1px solid #bbb; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -webkit-box-shadow: 0 1px 1px #fff; text-shadow: 0 0 1px #fff; position:relative; z-index:2; overflow:visible; zoom:1; }
+.jcmt .cmteditarea{z-index:0;}
+.journalTools ul.jacmenu{display:none; position: absolute;z-index: 4; list-style-type:none;border:solid 1px #dcdcdc;background-color:#f5f5f5;}
+.journalTools ul.jacmenu li{padding:2px;list-style-type:none;border-bottom:1px solid #dcdcdc;background-color:#f3f3f3;}
+
+.journalEditor .journalContent{overflow:auto;outline:none;}
+.journalEditor .journalContent span{padding:0 2px 0 2px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.journalEditor .journalContent .juser, .journalrow .juser{color:#000;border:1px solid #ccd5e4; background-color:#eff2f7;}
+.journalEditor .journalContent .jtag, .journalrow .jtag{border:1px solid #ccc; background-color:#f5f5f5}
+
+.journalEditor .journalClose, #linkClose, .miniclose, .minidel{float:right;display:none;width:14px !important; height:14px !important; cursor:pointer; background-image:url('../images/comment/mini_del.gif'); background-repeat:no-repeat;position:relative;z-index:90;}
+.journalEditor .minidel{position:absolute;right:0px;}
+.journalEditor .journalClose{position:absolute; right:15px; top:10px;}
+
+.journalEditor .journalPlaceholder,.jcmt .cmteditarea .editorPlaceholder{font-size:14px;color:#999;min-height:24px;line-height:24px;padding-left:7px;}
+.journalEditor .journalContent{float:left; display:none;height:1px;margin-bottom:15px;padding: 10px;font-size:14px;border:1px solid #ddd;line-height:1.3em;width:100%;resize:none;border-radius: 7px;}
+
+.journalEditor .journalPlaceholder {width:100%;}
+
+.journalTools .btnShare,.jcmt li.cmtbtn a{outline: none;cursor: pointer;text-align: center;text-decoration: none;
+	padding: 5px 10px;white-space:nowrap; text-shadow: 0 1px 1px rgba(0,0,0,.3);-webkit-border-radius: .3em; -moz-border-radius: .3em;border-radius:.3em;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);	box-shadow: 0 1px 2px rgba(0,0,0,.2);   color: #fef4e9;cursor:pointer;background: #5cb85c;
+	}
+
+.journalTools .btnShare:hover,.jcmt li.cmtbtn a:hover {text-decoration: none;background: #9c763c;
+	}
+	    
+.journalTools .btnShare:active,.jcmt li.cmtbtn a:active {position: relative;top: 1px;color: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#005cb2), to(#298fd0));
+	background: -moz-linear-gradient(top,  #005cb2,  #298fd0);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#005cb2', endColorstr='#298fd0');}		
+	    
+.journalTools .btnShare.disabled,.jcmt li.cmtbtn a.disabled{background:#cdcdcd;color:#999;cursor:text;}
+.journalTools ul.jacmenu li.liselected{background-color:#ffffcc;}
+
+
+.journalrow {border-bottom:1px solid #e4e1e1;margin-bottom:20px;padding:10px;}
+.journalrow div.author{overflow:hidden;float:left;}
+.journalrow div.author img{width:40px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#fff;border:1px #ccc solid;padding:4px;}
+.journalrow div.journalitem , .asktop .journalitem{margin-left:55px;}
+
+.journalrow p.journalfooter span{padding:0px 4px 0px 4px; font-weight:bold;}
+.journalrow .authorname{padding-right:6px;}
+.journalrow ul.jcmt,.journalrow div.journalitem .likes{padding:0px;font-size:11px;}
+.mod {background: #ff9933;padding: 1px 4px;color: #fff;font-size: 11px;font-weight: normal;margin-left: 5px;border-radius: 3px;}
+
+/*.journalrow div.journalitem ul.jcmt li{border-bottom: solid 1px #fff;}*/
+.journalrow ul.jcmt {margin: 10px 0 10px 55px;}
+.journalrow ul.jcmt li {list-style-type:none;margin-bottom:10px;}
+.journalrow ul.jcmt li textarea{border:solid 0px #ccc;font-family:tahoma,verdana,arial,sans-serif;font-size:12px;padding:0px;height:20px;margin-left:0px;margin-right:0px;width:100%;}
+.journalrow ul.jcmt li .miniclose{margin:2px;}
+.journalrow ul.jcmt li:hover .miniclose, .journalitem:hover .minidel{display:block;}
+.journalrow ul.jcmt li.cmtbtn .cmtinfo{display:none;} 
+.journalrow ul.jcmt li img{ float: left;left: 0;padding: 4px;position: relative;top: 0;}
+.journalrow ul.jcmt li p{padding:4px 0px 4px 5px; margin:3px 0px 5px 42px;}
+.journalrow ul.jcmt li p a{padding-right:6px;}                                         
+.journalrow ul.jcmt li p abbr{border-style: none;display: block;margin-bottom: 3px;margin-top: 4px; padding-left: 5px;padding-top: 4px;}
+.journalrow div.journalitem .journalfooter abbr {border-style:none;}
+.journalrow div.journalitem .jlink img{float:left; margin-right:12px;max-width:150px;}
+.journalrow div.journalitem .jlink div{max-width:450px;}
+.journalrow div.journalitem .likes{padding:2px;}                                              
+.jcmt .cmteditor{max-width:750px;display:none;resize:none;outline:none;}
+.jcmt .cmteditarea{margin: 2px 4px 4px 2px;}
+.jcmt .cmteditarea .editorPlaceholder{min-height:18px;font-size:11px;line-height:18px;}
+
+div.journalItems div.journalrow ul.jcmt li.cmteditarea{display:none;overflow:auto;width: 95%;}
+
+.journalInfo {display:none;clear:both;}
+.journalEditor input[type='text'],.jcmt input[type='text']{background: #fff url('../images/comment/input-bg.png') left top no-repeat; margin:5px 0; width: 38%; padding:7px 2%; border: 1px solid #bbb; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -webkit-box-shadow: 0 1px 1px #fff; text-shadow: 0 0 1px #fff; overflow:visible;}
+
+.cmreply , .cmlike {font-size: 12px;color: #4e7af3;}
+.cmreply:hover , .cmlike:hover {color: #ff9933;}
+.journalfooter abbr , .jsummary abbr {font-size: 11px;border: none;color: #999;}
+.jsummary {margin-left: 50px;padding: 10px;background: #f2f2f2;border: 1px solid #ddd;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+.jsummary div , .journalsummary div {display: block;padding: 7px 0;font-size: 13px;}
+
+.author .iconcom {background: url(../images/comment/icon_commnent.jpg) no-repeat;width: 40px;height:40px;float:left;}
+.jcmt .iconcom {background: url(../images/comment/icon_commnent2.jpg) no-repeat;}
+
+.cmreport {display:none;color:#4e7af3;font-size:12px;cursor:pointer;margin-left:7px;}
+.journalitem:hover>.journalfooter .cmreport,ul.jcmt li:hover .cmreport {display:inline-block}
+.asktop {background:#f3f3f3;border:1px solid #ddd;padding:10px;margin-bottom:5px;}
+.asktop .journalsummary {position:relative;}
+.top-comment {position:absolute;right:20px;top:0;background: url(../images/comment/comment_start_top.png) no-repeat left;padding-left:18px;color:#4e7af3;font-size:12px;}
+
+@media (max-width: 767px) {
+.journalEditor input[type='text'], .jcmt input[type='text'] {width: 95%;margin-bottom: 5px;}
+.jcmt input[type='text'].cmtemail {margin-bottom: 15px;}
+}
+
+.ratingview {background:transparent url("../images/comment/star-off.png") repeat-x scroll 0 0;height: 16px;width: 80px;padding:0 !important;margin:5px 0px;}
+.ratingview div {background:transparent url("../images/comment/star-on.png") repeat-x scroll 0 0;float: left;height: 16px;padding:0;margin:0;}
+
+.chartview {background: #eee;border-radius:3px;margin-bottom: 5px;}
+.chartview>div {background: #5cb85c;border-radius:3px;}

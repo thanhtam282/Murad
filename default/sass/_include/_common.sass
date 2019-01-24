@@ -1,0 +1,465 @@
+.fancybox-overlay
+	background: color-rgba($black,0.7)
+.fancybox-close
+	background: $red
+	+bor-rad(50%)
+	color: color-rgba($white,0.8)
+	+fs(36rem)
+	font-weight: lighter
+	line-height: 36px
+	text-align: center
+	+transform(rotateZ(45deg))
+	+transition(all,0.3s)
+	&:before
+		content: "+"
+	&:hover
+		color: $white
+		text-shadow: 0 0 10px $white
+.fancybox-nav
+	span 
+		display: block
+		width: 40px
+		height: 40px
+		+fs(28rem)
+		line-height: 32px
+		text-align: center
+		color: $white
+		border: 2px solid $white
+		+bor-rad(50%)
+		visibility: visible
+		opacity: 0.5
+		+transition(all,0.3s)
+		&:hover
+			opacity: 1
+			background: $white
+			color: $red
+	&.fancybox-prev
+		span
+			&:before
+				content: "\f104"
+				font-family: 'fontawesome'
+	&.fancybox-next
+		span
+			&:before
+				content: "\f105"
+				font-family: 'fontawesome'
+
+
+.RadCaptcha
+	#ctl00_altContent2_ctl01_captcha_ctl01
+		float: left
+		+ p 
+			float: left
+			margin-top: 0
+	span
+		+fs(13rem)
+		color: $red
+		margin-bottom: 5px
+	p
+		margin-top: 0.875rem
+	img
+		display: inline-block!important
+		margin-right: 0.9375rem
+		vertical-align: middle
+	input
+		width: 250px
+		+media-breakpoint-down(xs)
+			width: 100%
+	label
+		display: none
+	.rcRefreshImage
+		display: inline-block!important
+		vertical-align: middle
+		position: relative
+		color: transparent
+		width: 30px
+		height: 30px
+		&:after
+			content: '\f021'
+			font-family: "FontAwesome"
+			font-size: 18px
+			color: $black
+			position: absolute
+			top: 50%
+			right: 0
+			left: 0
+			+transform(translate(0, -50%))
+	#ctl00_mainContent_ctl03_captcha_ctl01
+		float: left
+		+ p 
+			display: table-cell
+			padding: 7px 0
+			input
+				width: 100%
+
+.ActionMenu
+	z-index: 99999 !important
+	.ActionMenuTag
+		line-height: 1.5
+		.fa
+			color: #1B4D79!important
+			width: auto!important
+			height: auto!important
+			border: none!important
+			font-size: 11px!important
+			display: inline-block!important
+			float: left!important
+			border-radius: 0!important
+			line-height: 1.1rem!important
+			margin-right: 4px!important
+	.ActionMenuBody
+		z-index: 99999 !important
+		> dl dd > a
+			color: #1B4D79!important
+			width: auto!important
+			height: auto!important
+			background: transparent
+			.fa
+				color: #1B4D79!important
+				width: auto!important
+				height: auto!important
+				border: none!important
+				font-size: 11px!important
+				display: inline-block!important
+				float: left!important
+				border-radius: 0!important
+				line-height: 1.1rem!important
+				margin-right: 4px!important
+		> h4
+			color: #333!important
+.cmsadminpanel
+	z-index: 16000009
+
+/*Register Form*/
+
+.subscribefrm
+	position: relative
+	.fa.fa-exclamation-triangle
+		color: red
+		+fs(15rem)
+		display: block
+		position: absolute
+		top: 10px
+		right: 15px
+		text-indent: -9999px
+		width: 15px
+		height: 15px
+		line-height: 15px
+		text-align: center
+		&:after
+			content: '\f071'
+			font-size: 12px
+			color: red
+			text-indent: 0
+			float: left
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+		@media only screen and (min-width: 1024px)
+			right: 130px
+			top: 13px
+	.fa-exclamation-triangle:before, .fa-warning:before
+		margin-right: 5px
+.form-group
+	position: relative
+	.fa.fa-exclamation-triangle
+		position: absolute
+		top: 64%
+		right: 15px
+		color: transparent
+		width: 15px
+		height: 15px
+		&:before
+			content: '\f071'
+			font-size: 12px
+			font-weight: 500
+			color: red
+			position: absolute
+	.fa-exclamation-triangle:before, .fa-warning:before
+		margin-right: 5px
+.contact-form
+	.form-group
+		.fa.fa-exclamation-triangle
+			// top: 40px
+			&:before
+				+fs(16rem)
+.subscribe
+	.alert-success
+		font-size: 0.875rem
+		line-height: 1.275rem
+		display: block
+		width: 100%
+		text-align: center
+		color: $blue
+		+fs(18rem)
+		border: none
+		background-color: rgba(255, 255, 255, 0.8)
+		padding: 10px
+		margin-bottom: 30px
+		border-radius: 0
+		font-weight: 500
+		text-transform: uppercase
+.hidden
+	display: none
+
+.scrolloff
+	pointer-events: none
+
+.share
+	margin-top: 15px
+	text-align: left
+	clear: both
+	&.sc-right
+		text-align: right
+	> div
+		display: inline-block
+		margin-bottom: 5px
+		margin-right: 5px
+		vertical-align: top
+	.google, .tweet
+		width: 60px
+	.fb-share-button.fb_iframe_widget iframe, iframe.twitter-share-button
+		display: block
+	.tweet
+		margin-top: 1px
+	.google
+		margin-top: -5px
+.job-wrap 
+	.table-responsive 
+		overflow-y: hidden
+	table
+		tr 
+			th, td 
+				border-color: darken($white, 15%)
+				padding: 15px
+			th 
+				color: $main
+				border-width: 1px
+				white-space: nowrap
+			td 
+				border-top: 1px dotted darken($white, 15%)
+				padding: 15px 10px
+				vertical-align: top
+				h2 
+					margin: 0 0 10px
+					line-height: 1.3em
+					font-weight: bold
+					cursor: pointer
+					span 
+						display: inline-block
+					
+					&:hover 
+						color: $main
+						text-decoration: underline
+				.job-content 
+					display: none
+				&.white-space 
+					white-space: nowrap
+				&.show 
+					h2 
+						color: $main
+						span 
+							border-bottom: 1px solid $main
+.button-page 
+.career-frame 
+	display: none
+	margin-top: 20px
+.apply-frm 
+	overflow: hidden
+	padding: 20px 0
+	h4 
+		color: $main
+		font-size: 14px
+		font-weight: normal
+	.form-group 
+		clear: both
+		margin-bottom: 15px
+		position: relative
+		.fa 
+			position: absolute
+			color: $main
+			right: 10px
+			top: 0
+		label 
+			font-weight: 700
+			font-size: 12px
+			text-align: left
+			color: $black
+			margin: 0 0 10px
+			padding: 0
+			display: block
+		
+		input[type="text"], textarea 
+			padding: 5px
+			background: $white
+			height: auto
+		textarea 
+			height: 170px
+		.frm-btnwrap 
+			margin-left: 0
+	.col-left 
+		width: 46%
+		float: left
+		margin-right: 4%
+		padding: 0
+	.col-right 
+		width: 50%
+		float: left
+		.RadUpload 
+			.ruFileWrap 
+				padding-right: 60px
+	.required 
+		color: $main
+	input[type="submit"] 
+		margin-left: 0
+		background: $main
+		color: $white
+		font-size: 14px
+		text-transform: uppercase
+		padding: 7px 10px
+		border: none
+		+border-radius(5px)
+		+transition(all 0.4s)
+		&:hover 
+			background: darken($main, 15%)
+
+// SEARCH
+
+// **********SEARCH-PAGE**********
+.searchresults 
+	.pagination
+		display: none
+	.altcontent1
+		display: none
+	.pagination
+		text-align: left
+	.banner-home
+		display: none
+	#fullpage
+		display: none
+.search-page
+	margin: 40px 0 40px
+	.searchresultsummary
+		display: none
+	.page-header
+		border: none
+		padding: 0
+		margin: 0
+	h1
+		font-size: 21px
+		font-weight: 700
+		margin: 0 0 15px
+		text-transform: none
+		line-height: 1.5em
+		color: $black
+		display: inline-block
+	.btnSearchWrap
+		position: relative
+		.btnSearch
+			+opacity(1)
+			position: absolute
+			top: 0
+			left: 0
+			text-align: center
+			bottom: 0
+			width: 34px
+			.fa
+				position: absolute
+				right: 0
+				display: block
+				top: 0
+				bottom: 0
+				left: 0
+				margin: 0 auto
+				width: 34px
+				height: 34px
+				line-height: 34px
+				border: 1px solid darken($white, 15%)
+				vertical-align: middle
+		.seachpage-btn
+			position: relative
+			height: 34px
+			width: 34px
+			+opacity(0)
+	.btn
+		background-color: $blue
+		color: $white
+		border: none
+		+transition(all,.3s)
+		&:hover,  &:focus
+			background-color: darken($blue,5%)
+	.searchsummary
+		margin: 10px 0 25px
+		display: none
+		strong
+			color: $black
+	.searchcontrols
+		margin: 15px 0
+		input[type="text"]
+			height: 35px
+			line-height: 35px
+			padding: 0 15px
+			border: 1px solid darken($white, 15%)
+			font-size: 0.9375rem
+			color: $black
+			+border-radius(0)
+		input[type="submit"]
+			border: none
+			height: 35px
+			line-height: 35px
+			text-align: center
+			padding: 0 20px
+			color: $white
+			background-color: $orange
+	.searchresultlist
+		margin-top: 20px
+	.searchresult
+		border-bottom: 1px solid darken($white, 15%)
+		margin: 0 0 15px
+		padding: 0 0 15px
+		h3
+			font-size: 16px
+			font-weight: 600
+			margin: 0 0 10px
+			color: $black
+			a
+				color: $orange
+				text-decoration: none
+				&:hover
+					color: $red
+	hr
+		display: none
+.checkbox 
+	input 
+		display: none
+		+ label 
+			padding-left: 25px
+			+pos(rel,null)
+			+fs(14rem)
+			color: darken($white,60%)
+			&:before 
+				content: ''
+				display: block
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 2px null null 0) 
+			&:after 
+				content: '\f00c'
+				display: block
+				width: 14px
+				height: 14px
+				line-height: 12px
+				text-align: center
+				color: $lred
+				+fs(18rem)
+				font-family: 'fontawesome'
+				+pos(abs, 2px null null -1px)
+				opacity: 0  
+		&:checked 
+			+ label 
+				&:after 
+					opacity: 1     

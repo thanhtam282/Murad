@@ -1,0 +1,229 @@
+.bannerwrap
+	.container
+		+media-breakpoint-down(xl)
+			max-width: 1430px
+			width: 100%
+	.list-banner
+		.banner-img
+			margin-top: 200px
+			+media-breakpoint-down(lg)
+				margin-top: 162px
+			+media-breakpoint-down(md)
+				margin-top: 100px
+				img
+					width: 40%
+					margin: 0 auto
+			+media-breakpoint-down(sm)
+				display: none
+		.banner-txt
+			margin-top: 100px
+			color: $white
+			+media-breakpoint-down(md)
+				margin-top: 50px
+			+media-breakpoint-down(xs)
+				margin-top: 20px
+			.small-title
+				text-transform: uppercase
+				+media-breakpoint-down(xs)
+					display: none
+			.banner-title
+				+fs(34rem)
+				font-weight: bold
+				+pos(rel,null)
+				padding-bottom: 10px
+				+media-breakpoint-down(lg)
+					+fs(28rem)
+				+media-breakpoint-down(md)
+					+fs(20rem)
+				+media-breakpoint-down(sm)
+					+fs(18rem)
+				+media-breakpoint-down(xs)
+					+fs(13rem)
+				&:before
+					content: ''
+					background: $white
+					width: 50px
+					height: 2px
+					+pos(abs, null null 0 null)
+			.banner-desc
+				margin-top: 15px
+				+fs(18rem)
+				font-weight: 300
+				+media-breakpoint-down(md)
+					display: none
+			.list-service
+				width: 600px
+				margin-top: 30px
+				+media-breakpoint-down(lg)
+					width: 100%
+					display: none
+				ul
+					li
+						width: 25%
+						float: left
+						text-align: center
+						padding: 0 15px
+						text-transform: uppercase
+						+fs(12rem)
+						a
+							color: $main
+						&:hover
+							a
+								letter-spacing: 0.5px
+							img
+								+transform(scale3d(1.1,1.1,1))
+						img
+							display: block
+							margin: 0 auto
+							margin-bottom: 15px
+							+transition(all,0.3s)
+		.viewmore
+			background: $white
+			box-shadow: 0 1px 3px color-rgba($main,0.2)
+			font-weight: bold
+			color: $main
+			text-transform: uppercase
+			width: 180px
+			+bor-rad(20px)
+			display: block
+			text-align: center
+			padding: 7px 0px
+			margin-top: 20px
+			+media-breakpoint-down(sm)
+				+fs(12rem)
+				width: 100px
+			+media-breakpoint-down(xs)
+				+fs(10rem)
+				margin-top: 10px
+				padding: 5px 0px
+			&:hover
+				background: $blue
+				color: $white
+		.note
+			color: #414042
+			font-weight: 300
+			margin-top: 15px
+			+media-breakpoint-down(md)
+				display: none
+		.circle
+			float: right
+			margin-top: -40px
+			+media-breakpoint-down(lg)
+				display: none
+	.item
+		height: 640px
+		background-size: cover !important
+		+media-breakpoint-down(lg)
+			height: 500px
+		+media-breakpoint-down(md)
+			height: 370px
+		+media-breakpoint-down(sm)
+			height: 300px
+		+media-breakpoint-down(xs)
+			height: 170px
+		&.pos2
+			.banner-img
+				margin-top: 350px
+				+media-breakpoint-down(lg)
+					margin-top: 300px
+				+media-breakpoint-down(md)
+					margin-top: 100px
+			.banner-txt
+				.banner-title
+					color: $blue
+					&:before
+						background: $blue
+				.banner-desc
+					color: $white
+		&.pos3
+			.banner-txt
+				.banner-title
+					font-weight: 300
+					color: $main
+					width: 550px
+					+media-breakpoint-down(md)
+						width: 100%
+					&:before
+						background: none
+				.banner-sign
+					margin-top: 30px
+		&.pos4
+			.banner-txt
+				padding: 0 30px
+				+media-breakpoint-down(sm)
+					padding: 0
+				.banner-title
+					color: $main
+					width: 340px
+					+media-breakpoint-down(lg)
+						width: 100%
+					&:before
+						background: none
+				.sub-title
+					color: $main
+					+fs(18rem)
+					width: 400px
+					+media-breakpoint-down(sm)
+						width: 100%
+						+fs(16rem)
+					+media-breakpoint-down(xs)
+						+fs(13rem)
+				.banner-desc
+					width: 435px
+					+media-breakpoint-down(md)
+						display: none
+					+media-breakpoint-down(sm)
+						width: 100%
+					+fs(13rem)
+	.slick-prev, .slick-next
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		z-index: 5
+		+fs(0)
+		color: $white
+		text-shadow: 0 1px 3px color-rgba($main,0.1)
+		+transition(all,0.3s)
+		+media-breakpoint-down(lg)
+			display: none !important
+		&:before
+			content: ''
+			font-family: 'fontawesome'
+			+fs(48rem)
+			+media-breakpoint-down(sm)
+				+fs(18rem)
+		// &:hover
+		// 	color: $blue
+	.slick-prev
+		left: 60px
+		&:before
+			content: '\f104'
+	.slick-next
+		right: 60px
+		&:before
+			content: '\f105'
+.slick-dots
+	+pos(abs, null 0 20px 0)
+	text-align: center
+	+media-breakpoint-down(sm)
+		// +pos(static,unset)
+		padding: 5px 0
+		bottom: 0
+	li 
+		display: inline-block
+		width: 13px
+		height: 13px
+		+bor-rad(50%)
+		background: darken($white,10%)
+		cursor: pointer
+		+media-breakpoint-down(sm)
+			width: 8px
+			height: 8px
+			background: darken($white,5%)
+			border: none
+		+ li 
+			margin-left: 10px
+		button
+			display: none
+		&.slick-active
+			background: $blue
+			border-color: $blue

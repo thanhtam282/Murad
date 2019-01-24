@@ -1,4 +1,8 @@
 .murad-2019-4
+	padding-bottom: r(90px)
+	@media screen and (max-width: 992px)
+		padding-bottom: r(30px)
+
 	h2
 		max-width: r(510px)
 		text-transform: uppercase
@@ -7,6 +11,9 @@
 		font-weight: 600
 		text-align: center
 		margin: 0 auto
+		@media screen and (max-width: 992px)
+			font-size: 1.2rem
+			max-width: none
 	figure
 		.boxzoom
 			display: flex
@@ -39,6 +46,7 @@
 				font-weight: 500
 			.detail
 				margin-top: r(25px)
+				min-height: r(105px)
 				p
 					font-weight: normal
 					max-width: none

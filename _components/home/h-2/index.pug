@@ -1,80 +1,43 @@
 section.murad-2019-2
 	.container
-		.row
-			.col-xs-12
-				ul.nav
-					li.nav-item
-						a.nav-link(href="#tab-1").active Lão hóa tế bào
-					li.nav-item
-						a.nav-link(href="#tab-2") Công nghệ ReactivCell
-					li.nav-item
-						a.nav-link(href="#tab-3") Trước và sau khi sử dụng
-section.murad-2019-2-2
-	.container
-		.btn.btn-next
-			//- span.fab.fa-facebook-f
+		.slider-img
+			.slider-control
+				.slider-nav
+					.item
+						h4 Lão hóa tế bào
+					.item
+						h4 Công nghệ ReactivCell                             
+					.item
+						h4 Trước và sau khi sử dụng
+			.slider-for
+				.item
+					.row
+						.col-xs-12
+							h2 Lão hóa tầng tế bào là gì? 1
+							p Lão hóa tầng tế bào là hậu quả của sự tấn công bởi môi trường, DNA hư hại và quá trình lão hóa tự nhiên. Tổn thương tế bào xảy ra khắp cơ thể nhưng chúng ta chủ yếu nhìn thấy tác động của nó trên bề mặt da.
+							img.line(src='./img/home/line.png', alt='')
+					.row
+						.col-xs-12
+							h3 Tế bào lão hóa như thế nào
+							p Khi chúng ta già đi cùng với các gốc tự do tấn công làn da, màng tế bào bị vỡ, mất khả năng phực hồi, mất nguồn năng lượng hóa học và rò rỉ chất nước quan trọng trong tế bào. Tế bào bị suy yếu là con đường chính dẫn đến lão hóa ở tầng tế bào
+						- for ( var x =0; x< 4; x++)
+							.col-xs-12.col-md-6.col-lg-3
+								figure
+									.boxzoom
+										img(src='./img/home/item_1.jpg', alt='')
+									figcaption
+										h4 Sự lão hóa ở tầng tế bào được tiết lộ thông qua các nếp nhăn, vết chân chim, mụn và thay đổi màu da
+				.item
+					.row
+						.col-xs-12
+							h2 giới thiệu công nghệ reactivCell
+							p Điều gì sẽ xảy ra nếu chúng ta có thể tái nạp năng lượng và tái khởi động các tế bào da bề mặt để thêm ẩm và củng cố lại lớp bảo vệ da? Đây là câu hỏi mà Tiến sĩ Murad đã trả lời với Công nghệ ReactivCell (tái kích hoạt tế bào), độc quyền trong dòng sản phẩm Technoceuticals® Professional Concentrates
+							img.line(src='./img/home/slider_2.jpg', alt='')
 
-			span.lnr.lnr-chevron-right
-		.btn.btn-prev
-			//- span.fab.fa-facebook-f
-			span.lnr.lnr-chevron-left
-		.block_btn
-			a(href="#tab-1").btn-stt.active
-			a(href="#tab-2").btn-stt
-			a(href="#tab-3").btn-stt
-		.list-items
-			.tab-content#tab-1.item
-				.row
-					.col-xs-12
-						h2 Lão hóa tầng tế bào là gì? 1
-						p Lão hóa tầng tế bào là hậu quả của sự tấn công bởi môi trường, DNA hư hại và quá trình lão hóa tự nhiên. Tổn thương tế bào xảy ra khắp cơ thể nhưng chúng ta chủ yếu nhìn thấy tác động của nó trên bề mặt da.
-						img.line(src='./img/home/line.png', alt='')
-				.row
-					.col-xs-12
-						h3 Tế bào lão hóa như thế nào
-						p Khi chúng ta già đi cùng với các gốc tự do tấn công làn da, màng tế bào bị vỡ, mất khả năng phực hồi, mất nguồn năng lượng hóa học và rò rỉ chất nước quan trọng trong tế bào. Tế bào bị suy yếu là con đường chính dẫn đến lão hóa ở tầng tế bào
-					- for ( var x =0; x< 4; x++)
-						.col-xs-12.col-md-6.col-lg-3
-							figure
-								.boxzoom
-									img(src='./img/home/item_1.jpg', alt='')
-								figcaption
-									h4 Sự lão hóa ở tầng tế bào được tiết lộ thông qua các nếp nhăn, vết chân chim, mụn và thay đổi màu da
-					
-			.tab-content#tab-2.item
-				.row
-					.col-xs-12
-						h2 Lão hóa tầng tế bào là gì? 2
-						p Lão hóa tầng tế bào là hậu quả của sự tấn công bởi môi trường, DNA hư hại và quá trình lão hóa tự nhiên. Tổn thương tế bào xảy ra khắp cơ thể nhưng chúng ta chủ yếu nhìn thấy tác động của nó trên bề mặt da.
-						img.line(src='./img/home/line.png', alt='')
-				.row
-					.col-xs-12
-						h3 Tế bào lão hóa như thế nào
-						p Khi chúng ta già đi cùng với các gốc tự do tấn công làn da, màng tế bào bị vỡ, mất khả năng phực hồi, mất nguồn năng lượng hóa học và rò rỉ chất nước quan trọng trong tế bào. Tế bào bị suy yếu là con đường chính dẫn đến lão hóa ở tầng tế bào
-					- for ( var x =0; x< 4; x++)
-						.col-xs-12.col-md-6.col-lg-3
-							figure
-								.boxzoom
-									img(src='./img/home/item_1.jpg', alt='')
-								figcaption
-									h4 Sự lão hóa ở tầng tế bào được tiết lộ thông qua các nếp nhăn, vết chân chim, mụn và thay đổi màu da
-					
-			.tab-content#tab-3.item
-
-				
-				.row
-					.col-xs-12
-						h2 Lão hóa tầng tế bào là gì? 3
-						p Lão hóa tầng tế bào là hậu quả của sự tấn công bởi môi trường, DNA hư hại và quá trình lão hóa tự nhiên. Tổn thương tế bào xảy ra khắp cơ thể nhưng chúng ta chủ yếu nhìn thấy tác động của nó trên bề mặt da.
-						img.line(src='./img/home/line.png', alt='')
-				.row
-					.col-xs-12
-						h3 Tế bào lão hóa như thế nào
-						p Khi chúng ta già đi cùng với các gốc tự do tấn công làn da, màng tế bào bị vỡ, mất khả năng phực hồi, mất nguồn năng lượng hóa học và rò rỉ chất nước quan trọng trong tế bào. Tế bào bị suy yếu là con đường chính dẫn đến lão hóa ở tầng tế bào
-					- for ( var x =0; x< 4; x++)
-						.col-xs-12.col-md-6.col-lg-3
-							figure
-								.boxzoom
-									img(src='./img/home/item_1.jpg', alt='')
-								figcaption
-									h4 Sự lão hóa ở tầng tế bào được tiết lộ thông qua các nếp nhăn, vết chân chim, mụn và thay đổi màu da
+				.item
+					.row
+						.col-xs-12
+							h2 tối đa hóa kết quả điều trị
+							p Sử dụng tinh chất siêu đậm đặc tại nhà sau khi peels da tại spa để tối đa hóa kết quả điều trị.
+							img.line(src='./img/home/slider_3.jpg', alt='')
+							p (*) Kết quả của việc kết hợp sức mạnh peel da công nghệ dược Murad và 4 tuần sử dụng giải pháp trẻ hóa da bằng tinh chất siêu đậm đặc tại nhà. 

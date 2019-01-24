@@ -1,1 +1,66 @@
-.murad-2019-1
+.murad-2019-4
+	h2
+		max-width: r(510px)
+		text-transform: uppercase
+		color: color-get($mau,main)
+		font-size: r(30px)
+		font-weight: 600
+		text-align: center
+		margin: 0 auto
+	figure
+		.boxzoom
+			display: flex
+			align-items: center
+			justify-content: center
+			img
+				max-width: 100%
+		figcaption
+			text-align: center
+			h3 
+				font-size: r(16px)
+				color: color-get($mau,main)
+				font-weight: 600
+				+line(2)
+				max-width: r(220px)
+				margin: 0 auto
+				span
+					font-weight: 500
+					display: block
+					margin-bottom: 1rem
+					color: color-get($mau,tim)
+					text-transform: uppercase
+			p 
+				font-size: 1rem
+				color: color-get($mau,main)
+				max-width: r(270px)
+				margin: 0 auto
+				margin-top: 3px
+				+line(2)
+				font-weight: 500
+			.detail
+				margin-top: r(25px)
+				p
+					font-weight: normal
+					max-width: none
+					+line(5)
+					font-size: r(14px)
+	.wrapper_btn
+		display: flex
+
+		.btn-more
+			margin: 0 auto
+			margin-top: r(30px)
+			box-shadow: 0px 0px 0px 1px color-get($mau,main) inset
+			color: color-get($mau,main)
+			text-transform: uppercase
+			border-radius: r(18px)
+			height: r(36px)
+			display: flex
+			align-items: center
+			justify-content: center
+			min-width: r(181px)
+			transition: .3s all ease-in-out
+			&:hover
+				@media screen and (min-width: 992px)
+					background: color-get($mau, main)
+					color: color-get($mau,trang)

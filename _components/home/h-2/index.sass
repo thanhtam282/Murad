@@ -1,21 +1,35 @@
 .murad-2019-2
 	padding-top: r(20px)
-	ul
-		display: flex
-		justify-content: center
-		@media screen and (max-width: 578px)
-			flex-direction: column
-		li
+
+
+	.slider-control
+		.slick-track
 			box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15)
+			display: flex
+			@media screen and (max-width: 578px)
+				flex-direction: column
+			@media screen and (min-width: 578px)
+				width: auto !important
+		.slick-list
+			overflow: visible
+			display: flex
+			justify-content: center
+		.slick-slide
+			@media screen and (max-width: 578px)
+				width: auto !important
+		.item
 			&:last-child
-				a
+				h4
 					&:before
 						display: none
-			a
+			h4
 				width: 100%
+				display: flex
+				justify-content: center
+				align-items: center
 				height: 100%
 				background: color-get($mau, trang)
-				padding: 1rem 
+				padding: 1rem  !important
 				color: color-get($mau,text-3)
 				position: relative
 				text-align: center
@@ -67,69 +81,107 @@
 						background: color-get($mau, tim)
 						&:after
 							bottom: r(-15px)
+			&.slick-current
+				h4
+					color: color-get($mau,trang)
+					background: color-get($mau, tim)
+					&:after
+						
+						bottom: r(-10px)
+					&:before
+						display: none
+				@media screen and (min-width: 992px)
+					h4
+						&:after
+							bottom: r(-15px)
+	.slider-for
+		margin-top: r(45px)
+		@media screen and (max-width: 992px)
+			margin-top: 1.5rem
 
-.murad-2019-2-2
+		.slick-dots
+			display: flex
+			justify-content: center
+			bottom: -30px
+			li
+				box-shadow: none
+				width: r(14px)
+				height: r(14px)
+				background: #d8d8d8
+				margin: 0 5px 
+				margin-top: 1rem
+				display: block
+				border-radius: 0
+				&.slick-active
+					background: color-get($mau, tim)
+		.slick-next
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 5
+			color: color-get($mau,text-9)
+			right: 0
+			font-size: 0
+			&:before
+				font-size: r(44px)
+				content: '\e876'
+				font-family: 'Linearicons-Free'
+		.slick-prev
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 5
+			color: color-get($mau,text-9)
+			left: 0
+			font-size: 0
+			&:before
+				font-size: r(44px)
+				content: '\e875'
+				font-family: 'Linearicons-Free'
+.murad-2019-2
 	margin-top: r(45px)
 	.container
 		position: relative
 		padding-bottom: 2rem
-	.btn-next, .btn-prev
-		z-index: 9
-		font-size: 2rem
-		position: absolute
-		top: 50%
-		transform: translateY(-50%)
-		left: 0
-		color: color-get($mau,text-9)
-	.btn-next
-		right: 0
-		left: auto
-	.block_btn
-		position: absolute
-		bottom: 0
-		left: 50%
-		display: flex
-		transform: translateX(-50%)
-		.btn-stt
-			width: r(14px)
-			height: r(14px)
-			background: #d8d8d8
-			margin: 0 5px 
-			margin-top: 1rem
-			display: block
-			&.active
-				background: color-get($mau, tim)
-	.tab-content
+	.item
+		&:nth-last-child(2)
+			h2
+				max-width: r(334px)
+			p
+				max-width: r(600px)
+		h2, h3
+			text-transform: uppercase
+			color: color-get($mau,main)
+			font-size: r(30px)
+			font-weight: 500
+			max-width: r(780px)
+			margin: 0 auto
+			text-align: center
+			@media screen and (max-width: 992px)
+				font-size: 1.2rem
 
-		+.tab-content
-			display: none
-	h2, h3
-		text-transform: uppercase
-		color: color-get($mau,main)
-		font-size: r(30px)
-		font-weight: 500
-		max-width: r(780px)
-		margin: 0 auto
-		text-align: center
-	.line
-		margin: 2rem auto
-		display: flex
-	p
-		text-align: center
-		margin: 0 auto
-		color: color-get($mau,main)
-		margin-top: r(30px)
-		max-width: r(780px)
-	figure
-		margin-top: 2rem
-		.boxzoom
+		.line
+			margin: 2rem auto
 			display: flex
-			justify-content: center
-			img
-				max-width: 100%
+		p
+			text-align: center
+			margin: 0 auto
+			color: color-get($mau,main)
+			margin-top: r(30px)
+			max-width: r(780px)
+			@media screen and (max-width: 992px)
+				margin-top: 1rem
+				font-size: .9rem
+		figure
+			margin-top: 2rem
+			.boxzoom
+				display: flex
+				justify-content: center
+				img
+					max-width: 100%
 
-		figcaption
-			margin-top: 1rem
-			display: flex
-			h4
-				text-align: center
+			figcaption
+				margin-top: 1rem
+				display: flex
+				h4
+					text-align: center

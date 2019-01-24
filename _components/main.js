@@ -1,59 +1,45 @@
 // viết script, gọi function ở đây
 $(document).ready(() => {
-	var no_element = $('.murad-2019-2 ul li').length
-	var tab_el = $('.murad-2019-2 ul li a')
-	$('.murad-2019-2 .nav .nav-link').on('click', function () {
-		$(this).toggleClass('active')
-		$(this).parent().siblings().find('a').removeClass('active')
-		var pos = $('.murad-2019-2 ul li a.active').parent().index()
-		
-		$('.murad-2019-2-2 .block_btn a').eq(pos ).siblings().removeClass('active')
-		$('.murad-2019-2-2 .block_btn a').eq(pos ).toggleClass('active')
-		$('.murad-2019-2-2').find($(this).attr('href')).fadeIn()
-		$('.murad-2019-2-2').find($(this).attr('href')).siblings().hide()
-
-	})
-	$('.murad-2019-2-2 .block_btn .btn-stt').on('click', function () {
-		$(this).toggleClass('active')
-		$(this).siblings().removeClass('active')
-		var pos = $('.murad-2019-2-2 .block_btn  a.active').index()
-		
-		tab_el.eq(pos ).addClass('active')
-		tab_el.eq(pos ).parent().siblings().find('a').removeClass('active')
-		$('.murad-2019-2-2').find($(this).attr('href')).fadeIn()
-		$('.murad-2019-2-2').find($(this).attr('href')).siblings().hide()
-
-	})
 
 
-
-	$('.murad-2019-2-2 .btn-next').click(function () {
-		var position = $('.murad-2019-2 ul li a.active').parent().index()
-		if (position >= no_element-1) {
-			position = -1
-		}
-		tab_el.eq(position + 1).addClass('active')
-		tab_el.eq(position + 1).parent().siblings().find('a').removeClass('active')
-		$('.murad-2019-2-2 .block_btn a').eq(position + 1).siblings().removeClass('active')
-		$('.murad-2019-2-2 .block_btn a').eq(position + 1).toggleClass('active')
-		$('.murad-2019-2-2').find(tab_el.eq(position + 1).attr('href')).fadeIn()
-		$('.murad-2019-2-2').find(tab_el.eq(position + 1).attr('href')).siblings().hide()
-
-	})
-	$('.murad-2019-2-2 .btn-prev').click(function () {
-		var position = $('.murad-2019-2 ul li a.active').parent().index()
-		if (position == 0) {
-			position = no_element
-		}
-		tab_el.eq(position - 1).addClass('active')
-		tab_el.eq(position - 1).parent().siblings().find('a').removeClass('active')
-		$('.murad-2019-2-2 .block_btn a').eq(position - 1).siblings().removeClass('active')
-		$('.murad-2019-2-2 .block_btn a').eq(position - 1).toggleClass('active')
-		$('.murad-2019-2-2').find(tab_el.eq(position - 1).attr('href')).fadeIn()
-		$('.murad-2019-2-2').find(tab_el.eq(position - 1).attr('href')).siblings().hide()
-
-	})
-
-
+	slider_tab();
 
 });
+
+function slider_tab() {
+	$('.murad-2019-2 .slider-for').not('.slick-initialized').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: true,
+		adaptiveHeight: true,
+		fade: false,
+		infinite: true,
+		autoplay: false,
+		asNavFor: '.slider-nav',
+		responsive: [
+		{
+			breakpoint: 767,
+			settings: {
+				arrows: false,
+			}
+		},
+
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+	]
+	});
+	$('.murad-2019-2 .slider-nav').not('.slick-initialized').slick({
+		autoplay: false,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		dots: false,
+		arrows: false,
+		// prevArrow: $('.top-arrow'),
+		// nextArrow: $('.bottom-arrow'),
+		infinite: true,
+		focusOnSelect: true
+	})
+};

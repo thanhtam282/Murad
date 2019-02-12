@@ -17,18 +17,12 @@ function slider_tab() {
 		infinite: true,
 		autoplay: false,
 		asNavFor: '.slider-nav',
-		responsive: [
-		{
+		responsive: [{
 			breakpoint: 767,
 			settings: {
 				arrows: false,
 			}
-		},
-
-		// You can unslick at a given breakpoint now by adding:
-		// settings: "unslick"
-		// instead of a settings object
-	]
+		}, ]
 	});
 	$('.murad-2019-2 .slider-nav').not('.slick-initialized').slick({
 		autoplay: false,
